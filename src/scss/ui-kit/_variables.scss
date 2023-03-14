@@ -1,17 +1,17 @@
 // Цвета
 $colors: ("none": rgba(0, 0, 0, 0),
-  "primary": #af1a4c,
-  "second": #d7a751,
-  "black": #000000,
+  "primary": #4B2B16,
+  "second": #FBAB33,
+  "black": #262626,
   "white": #ffffff,
-  "gray": #b2b2b2,
-  "grey": #f6f7f9,
-  "red": #be1b1b,
+  "grey": #F2F2F2,
+  "gray": #D6D6D6,
+  "red": #AE4141,
   "green": #27ae60);
 
 // Шрифты
-$font-family: ("alt": "Circe",
-  "base": "SF Pro Display"
+$font-family: ("alt": "Manrope",
+  "base": "Inter"
 );
 
 // Разрешения экрана
@@ -43,9 +43,9 @@ $xl: 1280.98px;
   --sm : #{calc($sm - 30.98px)};
   --md : #{calc($md - 48.98px)};
   --lg : #{calc($lg - 54.98px)};
-  --xl : #{calc($xl - 160.98px)};
+  --xl : #{calc($xl - 110.98px)};
 
   --spacing : 4px;
-  --size-lg : 45px;
+  --size-lg : 55px;
   --size-md : 36px;
 }

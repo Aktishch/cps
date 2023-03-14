@@ -3,8 +3,7 @@ import scrolledPage from './functions/scrolled-page'
 
 const init = (): void => {
 
-  const body = document.body as HTMLBodyElement
-  const parallaxItems = body.querySelectorAll('*[data-parallax]') as NodeListOf<Element>
+  const parallaxItems = document.querySelectorAll('*[data-parallax]') as NodeListOf<Element>
 
   parallaxItems.forEach((element: Element): void => {
 
@@ -34,24 +33,6 @@ const init = (): void => {
       }
 
     }
-
-    body.addEventListener('mousemove', ((event: MouseEvent): void => {
-
-      const coordinates: coordinates = {
-
-        top: event.clientY / window.innerHeight,
-        left: event.clientX / window.innerWidth
-
-      }
-
-      if (parallaxItem.dataset.parallax == 'layer') {
-
-        parallaxItem.style.setProperty('--y', `${coordinates.top}px`)
-        parallaxItem.style.setProperty('--x', `${coordinates.left}px`)
-
-      }
-
-    }) as EventListener)
 
     window.requestAnimationFrame(parallaxToScroll)
 

@@ -1,40 +1,44 @@
-// Логотип
-.logo {
-  width: 150px;
-}
-
-// Прогресс прокрутки страницы
-.progress-line {
-  top   : 0;
-  left  : 0;
-  right : 0;
-  height: 5px;
+// Градиент
+.gradient {
+  background-image: linear-gradient(180deg, var(--color-none) 0%, var(--color-black-10) 100%);
 }
 
 // Шапка документа
 .header {
-  top      : 0;
-  left     : 0;
-  right    : 0;
-  transform: translateY(var(--top));
+  &__btn {
+    &-text--2 {
+      display: none;
+    }
+  }
+
+  @media(max-width: $xl) {
+    &__btn {
+      &-text--1 {
+        display: none;
+      }
+
+      &-text--2 {
+        display: block;
+      }
+    }
+  }
+
+  @media(max-width: $lg) {
+    & {
+      position : sticky;
+      top      : 0;
+      left     : 0;
+      right    : 0;
+      transform: translateY(var(--top));
+    }
+  }
 }
 
 // Навигация
 .nav {
-  max-width: 800px;
-
-  &__content {
-    right: 0;
-    top  : 40px;
-  }
-
-  &__accordion[data-accordion="active"] &__arrow {
-    transform: rotate(90deg);
-  }
-
-  &__accordion[data-accordion="active"] &__content {
-    top: 20px;
-  }
+  top  : 0;
+  left : 0;
+  right: 0;
 }
 
 // Мобильное меню
@@ -43,7 +47,7 @@
 
   &__content {
     max-width       : 375px;
-    background-color: var(--color-black-90);
+    background-color: var(--color-white-90);
     backdrop-filter : blur(4px);
     box-shadow      : 0 0 0 100vw var(--color-black-50);
   }
@@ -97,191 +101,48 @@
     transform: translateY(0);
     opacity  : 1;
   }
-
-  &__accordion[data-accordion="active"] &__arrow {
-    transform: rotate(90deg);
-  }
 }
 
-// Умное меню
-.smart-menu {
-  &__block {
-    max-width: 1120px;
-  }
-
-  &__item,
-  &__nav {
-    min-width: max-content;
-  }
-
-  &__content {
-    min-width: 210px;
-    top      : 50px;
-    right    : 0;
-  }
-
-  &__content &__item {
-    min-width: auto;
-  }
-
-  @media(hover) {
-    &__item:hover {
-      color: var(--color-second);
-    }
-  }
-}
-
-// Перетаскиваемое социальное меню
-.social {
-  width       : 200px;
-  height      : 200px;
-  bottom      : 0;
-  left        : calc(100vw - 150px);
-  touch-action: none;
-  user-select : none;
-
-  &__round {
-    background-color: var(--color-primary-30);
-
-    &:not([data-social-round="show"]) {
-      transform: scale(0) rotate(-180deg);
-    }
-
-    &[data-social-round="show"] {
-      transform: scale(1) rotate(0);
+// Контакты
+.contacts {
+  @media(min-width: $md) {
+    &__content {
+      max-width      : 450px;
+      background     : linear-gradient(148.72deg, var(--color-white) 34.9%, var(--color-none) 100%);
+      backdrop-filter: blur(15px);
     }
   }
 
-  &__btn {
-    width : 40px;
-    height: 40px;
-
-    &::before {
-      content         : "";
-      display         : block;
-      position        : static;
-      width           : 100%;
-      height          : 100%;
-      background-color: currentColor;
-      border-radius   : inherit;
-      box-shadow      : inherit;
-    }
-  }
-}
-
-// Переключатель темы
-.theme {
-  width : 200px;
-  bottom: 8px;
-  left  : calc(100vw - 220px);
-}
-
-// Снежинки
-.snowflake {
-  position  : absolute;
-  background: url("../img/pictures/snow.png") no-repeat center / 100%;
-  animation : snowflake 3s linear both 1;
-}
-
-@keyframes snowflake {
-  0% {
-    opacity  : 1;
-    transform: translate(-50%, 0);
-    filter   : hue-rotate(0deg);
-  }
-
-  100% {
-    opacity  : 0;
-    transform: translate(-50%, 1000%);
-    filter   : hue-rotate(500deg);
-  }
-}
-
-// Шапка страницы
-.heading {
-  min-height: 250px;
-
-  &__pagination {
-    top : 20px;
-    left: 0;
-  }
-
-  &__btn {
-    width: 200px;
-  }
-}
-
-// Плеер
-.player {
-  &__controls {
-    max-width: 500px;
-  }
-
-  &__pack {
-    max-width: 250px;
-  }
-
-  &__btn {
-    min-width: 40px;
-    width    : 40px;
-    height   : 40px;
-
-  }
-
-  &__loading {
-    animation: loading-player 1s steps(8) infinite;
-  }
-
-  &__range {
-    left  : 0;
-    top   : 0;
-    bottom: 0;
-
-    &::after {
-      content         : "";
-      width           : 12px;
-      height          : 12px;
-      background-color: var(--color-primary);
-      border-radius   : 50%;
-      position        : absolute;
-      top             : 0;
-      right           : -4px;
-      bottom          : 0;
-      margin-block    : auto;
+  @media(min-width: $xl) {
+    &__content {
+      padding       : 45px 48px;
+      padding-bottom: 80px;
     }
   }
 
-  &__time {
-    width: 50px;
+  @media(max-width: $md) {
+    &__map {
+      position     : relative;
+      height       : 350px;
+      border-radius: 32px;
+    }
   }
-}
-
-@keyframes loading-player {
-  100% {
-    transform: rotateZ(360deg);
-  }
-}
-
-// Ограничение
-.limit {
-  background-color: var(--color-black-70);
-  backdrop-filter : blur(8px);
-
-  &__content {
-    max-width: 500px;
-  }
-}
-
-// Карта
-.map {
-  height: 400px;
 }
 
 // Подвал
 .footer {
+  &__btn {
+    width: 96px;
+  }
+
   @media(max-width: $md) {
     & {
       flex-direction: column;
+      align-items   : flex-start;
+    }
+
+    &__dev {
+      margin-left: 0;
     }
   }
 }

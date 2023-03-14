@@ -1,21 +1,21 @@
 // Рамка
 .border {
-  border: 1px solid var(--color-gray);
+  border: 1px solid var(--color-grey);
 
   &-top {
-    border-top: 1px solid var(--color-gray);
+    border-top: 1px solid var(--color-grey);
   }
 
   &-left {
-    border-left: 1px solid var(--color-gray);
+    border-left: 1px solid var(--color-grey);
   }
 
   &-right {
-    border-right: 1px solid var(--color-gray);
+    border-right: 1px solid var(--color-grey);
   }
 
   &-bottom {
-    border-bottom: 1px solid var(--color-gray);
+    border-bottom: 1px solid var(--color-grey);
   }
 
   &-none {

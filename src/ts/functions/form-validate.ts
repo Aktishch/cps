@@ -1,26 +1,8 @@
-import fileHandler from './file-handler'
-
-const emailInput = (input: HTMLInputElement): boolean => {
-
-  return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value)
-
-}
-
 const init = (form: HTMLFormElement): boolean => {
 
   const labels = form.querySelectorAll('*[data-label="input"]') as NodeListOf<Element>
-  const download = form.querySelector('*[data-label="download"]') as HTMLElement
 
   let validate: boolean = true
-
-  if (download) {
-
-    const input = download.querySelector('*[data-input="file"]') as HTMLInputElement
-    const error = download.querySelector('*[data-error]') as HTMLElement
-
-    validate = fileHandler.init(input, error)
-
-  }
 
   labels.forEach((element: Element): void => {
 
@@ -89,18 +71,6 @@ const init = (form: HTMLFormElement): boolean => {
           error.innerText = 'Пожалуйста, введите ваш номер!'
 
         }
-
-      }
-
-      if (input.dataset.input == 'email') {
-
-        if (emailInput(input)) inputError()
-
-      }
-
-      if (input.dataset.input == 'select') {
-
-        if (input.value == '0') inputError()
 
       }
 

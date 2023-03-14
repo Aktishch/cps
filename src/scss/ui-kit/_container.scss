@@ -22,12 +22,12 @@
       --padding-block : 70px;
       --padding-inline: var(--lg);
 
-      &:is(&--distance) {
+      &--distance {
         --width         : var(--lg);
-        --distance      : 10px;
+        --distance      : 16px;
         --padding-inline: calc(var(--width) + (var(--distance) * 2));
         margin          : var(--distance);
-        border-radius   : var(--distance);
+        border-radius   : 32px;
       }
     }
   }
@@ -36,9 +36,12 @@
     & {
       --padding-inline: var(--xl);
 
-      &:is(&--distance) {
-        --width   : var(--xl);
-        --distance: 20px;
+      &--distance {
+        --width         : var(--xl);
+        --distance      : 24px;
+        --padding-inline: calc(var(--width) + (var(--distance) * 2));
+        margin          : var(--distance);
+        border-radius   : 32px;
       }
     }
   }

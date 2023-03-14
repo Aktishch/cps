@@ -11,8 +11,7 @@ const scrollTo = (event: Event): void => {
 
   if (link.dataset.scroll == 'top') {
 
-    const headerHeight: number = (document.querySelector('*[data-header]') as HTMLElement).offsetHeight
-    const offsetTop: number = block.getBoundingClientRect().top + scrolledPage.init().top - headerHeight
+    const offsetTop: number = block.getBoundingClientRect().top + scrolledPage.init().top
 
     window.scrollTo({
 

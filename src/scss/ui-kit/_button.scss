@@ -22,7 +22,6 @@
 
   @include getBtn("primary");
   @include getBtn("second");
-  @include getBtn("gray");
 
   &--lg {
     --size: var(--size-lg);
@@ -36,7 +35,7 @@
 
   &--lg,
   &--md {
-    border-radius : 6px;
+    border-radius : 100px;
     padding-inline: calc(var(--size) / 2);
   }
 
@@ -53,11 +52,11 @@
   &--light {
     color           : var(--btn-color);
     background-color: var(--btn-accent);
-    border          : 2px solid var(--color-none);
+    border          : 1px solid var(--color-none);
   }
 
   &--contur {
-    border: 2px solid var(--btn-color);
+    border: 1px solid var(--btn-color);
   }
 
   &:focus {
@@ -96,6 +95,3 @@
 }
 
 @import "./button-swipe";
-@import "./button-glow";
-@import "./button-bubles";
-@import "./button-border";

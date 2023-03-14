@@ -1,48 +1,92 @@
-  <!-- Ограничение -->
+  <!-- Контакты -->
 
-  <div class="limit flex align-center justify-center bg-block fixed zi-10 fade-0 hidden pointer-all w-100 h-100 linear duration-8" data-limit>
-    <div class="limit__content flex flex-column align-center justify-center bg-white shadow-box radius-4 w-100 p-10">
-      <h4 class="text text--center text-18 text-md-20 bold-6 border-bottom w-100 mb-3 pb-3">Вам уже исполнилось 18 лет?</h4>
-      <p class="text text--center text-14 text-md-16 bold-4 lh-5 border-bottom w-100 mb-5 pb-3 mb-md-10">
-        Содержание сайта предназначено для просмотра исключительно лицам достигшим совершеннолетия <br>
-        Если вам нет 18 лет, немедленно покиньте сайт!
-      </p>
-      <div class="flex flex-wrap align-center justify-center gap-5 w-100">
-        <button class="btn btn--second btn--lg btn--fill px-10" data-limit-positive data-waved>Да</button>
-        <button class="btn btn--primary btn--lg btn--fill px-10" data-limit-negative data-waved>Нет</button>
+  <section class="contacts container container--distance flex flex-column relative overflow-hidden mb-0">
+    <div class="contacts__map order-2 bg-block bg-grey w-100 w-md-auto">
+      <div class="loader">
+        <span class="loader-progress">
+          <svg class="loader-icon icon">
+            <use xlink:href="img/icons.svg#loader">
+          </svg>
+        </span>
+      </div>
+      <div class="bg-block" id="map"></div>
+    </div>
+    <div class="contacts__content order-1 bg-white relative radius-8 shadow-drop w-100 py-10 px-5 px-md-10 mb-5 mb-md-0">
+      <h1 class="font-alt text text--uppercase text-26 text-md-36 text-lg-42 bold-7 lh-2 mb-5 mb-md-10">
+        контакты
+      </h1>
+      <div class="flex align-center mb-5 mb-md-9 pt-lg-5">
+        <svg class="icon text-18 text-md-24 mr-4">
+          <use xlink:href="img/icons.svg#location">
+        </svg>
+        <div class="flex flex-column">
+          <span class="text-14 text-md-16 bold-4 fade-60 mb-1">Наш адрес</span>
+          <span class="text-16 text-md-18 bold-6">г. Краснодар,ул. Минская 122/9</span>
+        </div>
+      </div>
+      <div class="flex mb-5 mb-md-9">
+        <svg class="icon text-18 text-md-24 mt-2 mr-4">
+          <use xlink:href="img/icons.svg#phone">
+        </svg>
+        <div class="flex flex-column">
+          <span class="text-14 text-md-16 bold-4 fade-60 mb-1">Наш телефон</span>
+          <a class="link text-16 text-md-18 bold-6 w-max" href="tel: 8 (928) 210-90-60">8 (928) 210-90-60</a>
+          <a class="link text-16 text-md-18 bold-6 w-max" href="tel: 8 (861) 290-90-60">8 (861) 290-90-60</a>
+        </div>
+      </div>
+      <div class="flex align-center mb-5 mb-md-9">
+        <svg class="icon text-18 text-md-24 mr-4">
+          <use xlink:href="img/icons.svg#email">
+        </svg>
+        <div class="flex flex-column">
+          <span class="text-14 text-md-16 bold-4 fade-60 mb-1">Наша почта</span>
+          <a class="link text-16 text-md-18 bold-6 w-max" href="mailto: centrprofstom@mail.ru">centrprofstom@mail.ru</a>
+        </div>
+      </div>
+      <div class="flex align-center mb-10">
+        <svg class="icon text-18 text-md-24 mr-4">
+          <use xlink:href="img/icons.svg#time">
+        </svg>
+        <div class="flex flex-column">
+          <span class="text-14 text-md-16 bold-4 fade-60 mb-1">Время работы</span>
+          <span class="text-16 text-md-18 bold-6">eжедневно с 08.00 до 20.00</span>
+        </div>
+      </div>
+      <div class="flex align-center gap-4 pt-lg-5">
+        <a class="btn btn--second radius-2" data-waved href="" target="_blank">
+          <img class="icon text-42" loading="lazy" src="img/pictures/wa.svg" alt="">
+        </a>
+        <a class="btn btn--second radius-2" data-waved href="" target="_blank">
+          <img class="icon text-42" loading="lazy" src="img/pictures/ok.svg" alt="">
+        </a>
+        <a class="btn btn--second radius-2" data-waved href="" target="_blank">
+          <img class="icon text-42" loading="lazy" src="img/pictures/vk.svg" alt="">
+        </a>
       </div>
     </div>
-  </div>
-
-  <!-- Карта -->
-
-  <section class="map container container--distance relative bg-grey overflow-hidden">
-    <div class="loader">
-      <span class="loader-progress">
-        <svg class="loader-icon icon">
-          <use xlink:href="img/icons.svg#loader">
-        </svg>
-      </span>
-    </div>
-    <div class="bg-block" id="map"></div>
   </section>
-    
+
   <!-- Подвал -->
-    
-  <footer class="footer container flex flex-wrap align-center justify-between gap-4 color-second bg-black pt-4 pb-10 pb-md-4" data-theme="light" id="footer">
-    <a class="logo btn mr-5" href="/">
-      <picture>
-        <source srcset="img/pictures/logo.webp" type="image/webp">
-        <img class="w-100" src="img/pictures/logo.png" alt="">
-      </picture>
-    </a>
-    <address class="color-white text text--center text-16 lh-3">
-      ​Рождественская набережная, <br> 45/1​5 офис; 3 этаж
-    </address>
-    <span class="link text-18 w-max" data-fancybox-dialog data-type="ajax" data-src="dialogs/dialog-politics.html">Privacy policy</span>
-    <span class="text-18">
-      Разработка: <a class="text text--underline w-max" href="https://stdkit.ru/" target="_blank">Студия КИТ</a>
-    </span>
+
+  <footer class="footer container flex flex-wrap align-center justify-between gap-6 gap-md-4 pt-5 pt-md-10 pb-10">
+    <div class="flex align-center">
+      <div class="pack pack--box icon text-32 radius-max mr-3">
+        <picture>
+          <source srcset="img/pictures/director.webp" type="image/webp">
+          <img class="image" loading="lazy" src="img/pictures/director.png" alt="">
+        </picture>
+      </div>
+      <div class="text-16 bold-5 lh-2">
+        <span class="fade-60">Главный врач:</span> Трофимов Андрей Евгеньевич
+      </div>
+    </div>
+    <div class="footer__dev flex align-center ml-auto mr-md-5 mr-lg-10 pr-lg-10">
+      <span class="text-16 bold-4 lh-2 mr-2 mr-lg-5">Разработка:</span>
+      <a class="footer__btn btn btn--second radius-1 p-1" data-waved href="" target="_blank">
+        <img class="w-100" src="img/pictures/kit.svg" alt="">
+      </a>
+    </div>
+    <span class="text-16 bold-5 lh-2">© 2023</span>
   </footer>
 
 </body>

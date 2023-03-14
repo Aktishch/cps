@@ -1,14 +1,14 @@
 // Тень
 .shadow {
   &-box {
-    box-shadow: 8px 8px 4px var(--color-black-20);
+    box-shadow: 0px 20px 40px var(--color-black-10);
   }
 
   &-text {
-    text-shadow: 8px 8px 4px var(--color-black-20);
+    text-shadow: 0px 20px 40px var(--color-black-10);
   }
 
   &-drop {
-    filter: drop-shadow(8px 8px 4px var(--color-black-20));
+    filter: drop-shadow(0px 20px 40px var(--color-black-10));
   }
 }
