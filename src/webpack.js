@@ -2,7 +2,7 @@
 import yandexMap from './lib/yandex-map'
 // import airDatepicker from './lib/air-datepicker'
 import fancybox from './lib/fancybox'
-// import sliderSwiper from './lib/slider-swiper'
+import sliderSwiper from './lib/slider-swiper'
 
 // Scripts
 import scrollHeader from './ts/scroll-header'
@@ -53,7 +53,7 @@ window.addEventListener('DOMContentLoaded', () => {
   yandexMap.init()
   // airDatepicker.init()
   fancybox.init()
-  // sliderSwiper.init()
+  sliderSwiper.init()
   scrollHeader.init()
   mobileMenu.init()
   // progressLine.init()

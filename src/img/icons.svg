@@ -16,12 +16,13 @@
       <path d="M41,38H7a2,2,0,0,1,0-4H41A2,2,0,0,1,41,38Z" fill="currentColor"/>
     </symbol>
 
-    <symbol id="close" width="100%" height="100%" viewBox="0 0 16 16">
-      <path d="M1 15L15 1M1 1L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <symbol id="close" width="100%" height="100%" viewBox="0 0 24 24">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12ZM7.29289 16.7071C6.90237 16.3166 6.90237 15.6834 7.29289 15.2929L10.5858 12L7.29289 8.70711C6.90237 8.31658 6.90237 7.68342 7.29289 7.29289C7.68342 6.90237 8.31658 6.90237 8.70711 7.29289L12 10.5858L15.2929 7.29289C15.6834 6.90237 16.3166 6.90237 16.7071 7.29289C17.0976 7.68342 17.0976 8.31658 16.7071 8.70711L13.4142 12L16.7071 15.2929C17.0976 15.6834 17.0976 16.3166 16.7071 16.7071C16.3166 17.0976 15.6834 17.0976 15.2929 16.7071L12 13.4142L8.70711 16.7071C8.31658 17.0976 7.68342 17.0976 7.29289 16.7071Z" fill="currentColor"/>
     </symbol>
 
-    <symbol id="success" width="100%" height="100%" viewBox="0 0 68 68">
-      <path fill-rule="evenodd" clip-rule="evenodd" d="M34 68C52.7777 68 68 52.7777 68 34C68 15.2223 52.7777 0 34 0C15.2223 0 0 15.2223 0 34C0 52.7777 15.2223 68 34 68ZM49.7552 28.5052C51.4149 26.8455 51.4149 24.1545 49.7552 22.4948C48.0955 20.8351 45.4045 20.8351 43.7448 22.4948L29.75 36.4896L24.2552 30.9948C22.5955 29.3351 19.9045 29.3351 18.2448 30.9948C16.5851 32.6545 16.5851 35.3455 18.2448 37.0052L26.7448 45.5052C28.4045 47.1649 31.0955 47.1649 32.7552 45.5052L49.7552 28.5052Z" fill="currentColor"/>
+    <symbol id="success" width="100%" height="100%" viewBox="0 0 24 24">
+      <path d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z" fill="currentColor"/>
+      <path d="M9 12L11 14L15 10" fill="var(--color-none)" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     </symbol>
 
     <symbol id="arrow-left" width="100%" height="100%" viewBox="0 0 11 18">
@@ -63,6 +64,20 @@
     <symbol id="time" width="100%" height="100%" viewBox="0 0 24 24">
       <path d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z" fill="var(--color-none)" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       <path d="M12 7V12L15 15" fill="var(--color-none)" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+    <symbol id="protect" width="100%" height="100%" viewBox="0 0 42 42">
+      <path d="M15.75 21L19.25 24.5L26.25 17.5" fill="var(--color-none)" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M21 5.25C25.0877 8.86651 30.4228 10.7495 35.875 10.5C36.6687 13.2003 36.9116 16.0326 36.5892 18.8286C36.2667 21.6246 35.3855 24.3272 33.9979 26.7759C32.6103 29.2246 30.7446 31.3694 28.5118 33.0828C26.2789 34.7963 23.7243 36.0434 21 36.75C18.2756 36.0434 15.721 34.7963 13.4882 33.0828C11.2553 31.3694 9.3896 29.2246 8.002 26.7759C6.6144 24.3272 5.73319 21.6246 5.41074 18.8286C5.08828 16.0326 5.33117 13.2003 6.12495 10.5C11.5771 10.7495 16.9122 8.86651 21 5.25" fill="var(--color-none)" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+    <symbol id="check" width="100%" height="100%" viewBox="0 0 24 24">
+      <path d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z" fill="var(--color-none)" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M9 12L11 14L15 10" fill="var(--color-none)" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+    <symbol id="star" width="100%" height="100%" viewBox="0 0 16 16">
+      <path d="M7.99989 11.8334L3.88522 13.9967L4.67122 9.41472L1.33789 6.17005L5.93789 5.50338L7.99522 1.33472L10.0526 5.50338L14.6526 6.17005L11.3192 9.41472L12.1052 13.9967L7.99989 11.8334Z" fill="currentColor"/>
     </symbol>
 
   </defs>

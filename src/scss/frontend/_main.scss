@@ -154,3 +154,330 @@
     }
   }
 }
+
+// Результат
+.result {
+  &-slide {
+    border: 2px solid var(--color-grey);
+  }
+
+  &__pack {
+    &--1 {
+      border-radius: 32px 0 0 32px;
+    }
+
+    &--2 {
+      border-radius: 0 32px 32px 0;
+    }
+  }
+
+  &__circle {
+    width : 100px;
+    height: 100px;
+    left  : 16px;
+    bottom: 16px;
+  }
+
+  @media(max-width: $md) {
+    &__pack {
+      border-radius: 32px;
+    }
+
+    &__circle {
+      width : 70px;
+      height: 70px;
+      left  : 8px;
+      bottom: 8px;
+    }
+  }
+}
+
+// Этапы
+.stages {
+  background: linear-gradient(253.69deg, var(--color-white-20) 0%, var(--color-none) 61.32%), #FAE8D2;
+
+  &__item {
+    border: 1px solid var(--color-white-60);
+
+    &--light {
+      background-image: radial-gradient(98.48% 326.98% at 0% 3.35%, var(--color-white-60) 20.83%, var(--color-white-20) 100%);
+    }
+  }
+
+  &__content {
+    max-width       : 275px;
+    border          : 1px solid var(--color-white-60);
+    background-color: var(--color-white-40);
+    box-shadow      : 0px 5px 80px var(--color-black-10);
+  }
+
+  &__circle {
+    width : 130px;
+    height: 130px;
+    top   : -50px;
+    left  : -42px;
+  }
+
+  &__number {
+    border: 1px solid var(--color-second);
+  }
+
+  &__block {
+    background-image: linear-gradient(253.69deg, rgba(174, 99, 46, 0.4) 0%, var(--color-none) 61.32%);
+  }
+
+  &__elem {
+    background: linear-gradient(253.69deg, rgba(213, 141, 92, 0.4) 0%, var(--color-none) 61.32%), #F5D8B6;
+  }
+
+  &__year {
+    min-width: 130px;
+    width    : 130px;
+    height   : 90px;
+  }
+
+  @media(min-width: $md) {
+    &-wrapper {
+      transform: none !important;
+    }
+  }
+
+  @media(max-width: $xl) {
+    &__br {
+      display: block;
+    }
+
+    &__item br {
+      display: none;
+    }
+  }
+
+  @media(max-width: $md) {
+    &__item {
+      flex-direction: column;
+    }
+
+    &__content {
+      max-width: 100%;
+    }
+
+    &__year {
+      min-width: 90px;
+      width    : 90px;
+      height   : 70px;
+    }
+  }
+}
+
+// Выбор
+.choice {
+  &__content {
+    max-width: 470px;
+  }
+
+  &__block {
+    max-width: 620px;
+    height   : 560px;
+  }
+
+  &__pack {
+    max-width: 400px;
+  }
+
+  &__item {
+    &--top {
+      top: -200px;
+    }
+
+    &--bottom {
+      bottom: -200px;
+    }
+  }
+
+  @media(max-width: $xl) {
+    & {
+      flex-direction: column;
+      align-items   : center;
+    }
+
+    &__content,
+    &__block {
+      max-width: 650px;
+    }
+  }
+
+  @media(max-width: $lg) {
+    &__item {
+      &--top {
+        top: -280px;
+      }
+
+      &--bottom {
+        bottom: -280px;
+      }
+    }
+  }
+
+  @media(max-width: $md) {
+    &__block {
+      height: 480px;
+    }
+  }
+}
+
+// Цена
+.price {
+  background-image: linear-gradient(253.69deg, rgba(174, 99, 46, 0.2) 0%, var(--color-none) 61.32%);
+
+  &__dashed {
+    border-bottom: 1px dashed var(--color-black);
+  }
+
+  &__text {
+    min-width: max-content;
+  }
+
+  @media(min-width: $lg) {
+    &__content {
+      max-width: 510px;
+    }
+  }
+
+  @media(max-width: $lg) {
+    &__bg {
+      opacity: 0.3;
+    }
+  }
+}
+
+// Условия
+.conditions {
+  &__bg {
+
+    &::before,
+    &::after {
+      content : "";
+      position: absolute;
+      inset   : 0;
+    }
+
+    &::before {
+      background-image: linear-gradient(180deg, var(--color-none) 45.01%, rgba(13, 6, 1, 0.9) 82.29%);
+    }
+
+    &::after {
+      background-image: linear-gradient(180deg, var(--color-none) 87.32%, var(--color-second-80) 121.89%);
+    }
+  }
+
+  &__pack {
+    &::before {
+      padding-top: 90%;
+    }
+  }
+
+  &__block {
+    background: linear-gradient(253.69deg, rgba(213, 141, 92, 0.6) 0%, rgba(174, 99, 46, 0) 61.32%), #F5BA77;
+  }
+
+  &__content {
+    background-image: linear-gradient(136.65deg, var(--color-white-40) 38.83%, var(--color-none) 81.79%);
+    backdrop-filter : blur(15px);
+  }
+
+  &__info {
+    max-width: 600px;
+  }
+
+  &__image {
+    max-width: 500px;
+
+    &::before {
+      padding-top: 40%;
+    }
+  }
+
+  @media(max-width: $xl) {
+    &__bg br {
+      display: none;
+    }
+  }
+
+  @media(max-width: $lg) {
+    &__pack {
+      &::before {
+        padding-top: 70%;
+      }
+    }
+
+    &__content {
+      flex-direction: column;
+      align-items   : flex-start;
+    }
+
+    &__info {
+      max-width: 100%;
+    }
+
+    &__image {
+      max-width: 400px;
+    }
+  }
+
+  @media(max-width: $md) {
+    &__pack {
+      &::before {
+        padding-top: 90%;
+      }
+    }
+
+    &__image {
+      max-width    : 100%;
+      border-radius: 12px;
+    }
+  }
+
+  @media(max-width: $sm) {
+    &__pack {
+      &::before {
+        padding-top: 120%;
+      }
+    }
+
+    &__bg {
+      background-image: linear-gradient(180deg, var(--color-none) 25.01%, rgba(13, 6, 1, 0.9) 82.29%);
+    }
+  }
+}
+
+// Отзывы
+.reviews {
+  &__card {
+    &::after {
+      content         : "";
+      position        : absolute;
+      inset           : 0;
+      background-image: linear-gradient(180deg, var(--color-none) 77.56%, var(--color-white) 96.65%);
+      pointer-events  : none;
+    }
+  }
+
+  &__circle {
+    width : 125px;
+    height: 125px;
+    border: 2px solid var(--color-second);
+  }
+
+  &__items {
+    height        : 300px;
+    padding-bottom: 60px;
+  }
+
+  &__item {
+    border: 1px solid var(--color-black-20);
+  }
+
+  &__value {
+    background-color: var(--color-green-light-20);
+  }
+}

@@ -90,4 +90,625 @@
   </div>
 </main>
 
+<!-- Результат -->
+
+<section class="result container overflow-hidden">
+  <h2 class="font-alt text text--center text--uppercase text-26 text-md-36 text-lg-42 bold-7 lh-2 mb-5 mb-md-10">
+    Результаты нашей работы
+  </h2>
+  <div class="result-slider relative">
+    <div class="swiper swiper--overwrap">
+      <div class="swiper-wrapper">
+        <% for (var i = 0; i < 3; i++) { %>
+          <div class="result-slide swiper-slide grid gap-md-5 gap-lg-7 relative bg-white radius-8 p-2 p-md-5 p-lg-8" data-waved>
+            <div class="col-12 col-md-6 mb-6 mb-md-0">
+              <div class="result__pack result__pack--1 pack pack--rect bg-grey">
+                <div class="loader">
+                  <span class="loader-progress">
+                    <svg class="loader-icon icon">
+                      <use xlink:href="img/icons.svg#loader">
+                    </svg>
+                  </span>
+                </div>
+                <picture>
+                  <source srcset="img/pictures/result-1.webp" type="image/webp">
+                  <img class="image" loading="lazy" src="img/pictures/result-1.jpg" alt="">
+                </picture>
+                <div class="result__circle flex align-center justify-center absolute bg-red color-white font-alt text text--center text-16 text-md-18 text-lg-20 bold-7 radius-max">До</div>
+              </div>
+              <div class="flex flex-column p-2 p-md-5 p-lg-10">
+                <h4 class="font-alt text-16 text-md-18 text-lg-20 bold-7 lh-4 mb-2 mb-md-5">До операции</h4>
+                <div class="flex flex-column gap-2 gap-md-5">
+                  <div class="flex align-center">
+                    <svg class="icon color-red text-24 mr-2">
+                      <use xlink:href="img/icons.svg#close">
+                    </svg>
+                    <span class="text-14 text-md-16 bold-5 lh-4">Частичное отсутствие зубов</span>
+                  </div>
+                  <div class="flex align-center">
+                    <svg class="icon color-red text-24 mr-2">
+                      <use xlink:href="img/icons.svg#close">
+                    </svg>
+                    <span class="text-14 text-md-16 bold-5 lh-4">Имеющиеся зубы не состоятельны</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="result__pack result__pack--2 pack pack--rect bg-grey">
+                <div class="loader">
+                  <span class="loader-progress">
+                    <svg class="loader-icon icon">
+                      <use xlink:href="img/icons.svg#loader">
+                    </svg>
+                  </span>
+                </div>
+                <picture>
+                  <source srcset="img/pictures/result-2.webp" type="image/webp">
+                  <img class="image" loading="lazy" src="img/pictures/result-2.jpg" alt="">
+                </picture>
+                <div class="result__circle flex align-center justify-center absolute bg-second gradient color-white font-alt text text--center text-16 text-md-18 text-lg-20 bold-7 radius-max">После</div>
+              </div>
+              <div class="flex flex-column p-2 p-md-5 p-lg-10">
+                <h4 class="font-alt text-16 text-md-18 text-lg-20 bold-7 lh-4 mb-2 mb-md-5">После операции</h4>
+                <div class="flex flex-column gap-2 gap-md-5">
+                  <div class="flex align-center">
+                    <svg class="icon color-green text-24 mr-2">
+                      <use xlink:href="img/icons.svg#success">
+                    </svg>
+                    <span class="text-14 text-md-16 bold-5 lh-4">Полное восстановление зубных рядов</span>
+                  </div>
+                  <div class="flex align-center">
+                    <svg class="icon color-green text-24 mr-2">
+                      <use xlink:href="img/icons.svg#success">
+                    </svg>
+                    <span class="text-14 text-md-16 bold-5 lh-4">Красивая улыбка и комфорт</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% } %>
+      </div>
+    </div>
+    <div class="swiper-pagination d-flex d-md-none color-second mt-5"></div>
+    <button class="swiper-button-prev btn btn--black btn--light d-none d-md-flex" data-waved>
+      <svg class="icon">
+        <use xlink:href="img/icons.svg#arrow-left">
+      </svg>
+    </button>
+    <button class="swiper-button-next btn btn--black btn--light d-none d-md-flex" data-waved>
+      <svg class="icon">
+        <use xlink:href="img/icons.svg#arrow-right">
+      </svg>
+    </button>
+  </div>
+</section>
+
+<!-- Этапы -->
+
+<% var stages = [
+  {
+    item: 'light',
+    number: '1',
+    title: 'Консультация и осмотр',
+    text: 'Направление на необходимые обследования и анализы'
+  },
+  {
+    item: 'fade',
+    number: '2',
+    title: 'Диагностика и составление плана лечения',
+    text: 'Согласно рентген-исследований и состояния организма. Индивидуальный подбор <br> необходимого типа, размера и количества имплантатов'
+  },
+  {
+    item: 'light',
+    number: '3',
+    title: 'Установка имплантов',
+    text: 'Удаление несостоятельных зубов(по необходимости) и установка имплантатов. <br>Снятие слепков для временного протезирования'
+  },
+  {
+    item: 'fade',
+    number: '4',
+    title: 'Установка временного зубного протеза',
+    text: 'Установка временного зубного протеза на 3 день после имплантации'
+  },
+  {
+    item: 'light',
+    number: '5',
+    title: 'Изготовление и установка постоянного зубного протеза',
+    text: 'Изготовление и установка постоянного зубного протеза через 6 месяцев после имплантации'
+  },
+] %>
+
+<section class="stages container container--distance mb-0">
+  <h2 class="font-alt text text--center text--uppercase text-26 text-md-36 text-lg-42 bold-7 lh-2 mb-5 mb-md-10">
+    Этапы лечение по методике <br class="stages__br d-none"> «Все на 4-х»
+  </h2>
+  <div class="stages-slider relative py-lg-5 mb-10">
+    <div class="swiper swiper--overwrap">
+      <div class="stages-wrapper swiper-wrapper d-flex d-md-grid grid gap-md-4">
+        <% for (var i = 0; i < stages.length; i++) { %>
+          <div class="swiper-slide col-md-12 h-auto">
+            <div class="stages__item stages__item--<%= stages[i].item %> flex align-center relative radius-8 overflow-hidden h-100" data-waved>
+              <div class="stages__content flex align-center justify-center relative radius-8 overflow-hidden w-100 p-4">
+                <div class="pack pack--rect radius-8 w-100">
+                  <div class="loader">
+                    <span class="loader-progress">
+                      <svg class="loader-icon icon">
+                        <use xlink:href="img/icons.svg#loader">
+                      </svg>
+                    </span>
+                  </div>
+                  <picture>
+                    <source srcset="img/pictures/stages-<%= stages[i].number %>.webp" type="image/webp">
+                    <img class="image image--rise" loading="lazy" src="img/pictures/stages-<%= stages[i].number %>.png" alt="">
+                  </picture>
+                </div>
+                <div class="stages__circle flex align-center justify-center absolute bg-white radius-max p-2">
+                  <div class="stages__number flex align-end justify-end text text--center text-24 bold-6 radius-max w-100 h-100 py-6 px-10"><%= stages[i].number %></div>
+                </div>
+              </div>
+              <div class="flex flex-column py-5 px-5 px-md-7 px-lg-10">
+                <h4 class="font-alt text text--uppercase text-16 text-md-20 text-lg-24 bold-7 lh-2 mb-2"><%= stages[i].title %></h4>
+                <p class="text-14 text-md-16 bold-4 lh-4 fade-70"><%= stages[i].text %></p>
+              </div>
+            </div>
+          </div>
+        <% } %>
+      </div>
+    </div>
+    <div class="swiper-pagination d-flex d-md-none color-primary mt-5"></div>
+  </div>
+  <div class="stages__block relative bg-primary radius-8 py-6 py-md-10 px-3 px-md-8">
+    <div class="bg-block radius-8 pointer-none">
+      <div class="pack pack--rect w-100 h-100">
+        <picture>
+          <source srcset="img/pictures/waves.webp" type="image/webp">
+          <img class="image" loading="lazy" src="img/pictures/waves.png" alt="">
+        </picture>
+      </div>
+    </div>
+    <div class="relative">
+      <div class="flex align-center justify-center color-white mb-5 mb-md-10">
+        <h3 class="font-alt text text--center text--uppercase text-26 text-md-36 text-lg-42 bold-7 lh-2 mr-3">даем гарантии!</h3>
+        <svg class="icon text-30 text-md-40 text-lg-46">
+          <use xlink:href="img/icons.svg#protect">
+        </svg>
+      </div>
+      <div class="grid gap-4 gap-md-8">
+        <div class="col-12 col-lg-6">
+          <div class="stages__elem flex align-center relative radius-5 h-100 p-2" data-waved>
+            <div class="stages__year flex flex-column align-center justify-center bg-white text text--center radius-5 mr-5 mr-md-8">
+              <span class="text-22 text-md-28 text-lg-32 bold-6">2</span>
+              <span class="text-16 text-md-18 bold-5">года</span>
+            </div>
+            <p class="text-16 text-md-18 bold-6 lh-2">На несъёмные зубные протезы</p>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="stages__elem flex align-center relative radius-5 h-100 p-2" data-waved>
+            <div class="stages__year flex flex-column align-center justify-center bg-white text text--center radius-5 mr-5 mr-md-8">
+              <span class="text-22 text-md-28 text-lg-32 bold-6">2</span>
+              <span class="text-16 text-md-18 bold-5">года</span>
+            </div>
+            <p class="text-16 text-md-18 bold-6 lh-2">На установку имплантов</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Преимущества -->
+
+<% var advantages = [
+  {
+    item: '',
+    img: '1',
+    title: 'Комфморт',
+    text: 'Зубные протезы не съёмные, что гораздо комфортнее  в сравнении со съёмными протезами'
+  },
+  {
+    item: '',
+    img: '2',
+    title: 'Открытое нёбо',
+    text: 'Нёбо остается открытым. При съёмных протезах нёбо перекрывается полностью'
+  },
+  {
+    item: '',
+    img: '3',
+    title: 'Удобство',
+    text: 'Зубные протезы с опорой на имплантаты не «хлябают» и не слетают'
+  }
+] %>
+
+<section class="advantages container container--distance container--sm bg-grey">
+  <h2 class="font-alt text text--center text--uppercase text-26 text-md-36 text-lg-42 bold-7 lh-2 mb-5 mb-md-10">
+    Преимущества методики <br class="d-block d-md-none">«Все на 4-х»
+  </h2>
+  <div class="grid gap-4 gap-md-6 gap-lg-10 pt-lg-5">
+    <% for (var i = 0; i < advantages.length; i++) { %>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 p-2 p-md-4" data-waved>
+          <div class="pack pack--rect bg-grey radius-8">
+            <div class="loader">
+              <span class="loader-progress">
+                <svg class="loader-icon icon">
+                  <use xlink:href="img/icons.svg#loader">
+                </svg>
+              </span>
+            </div>
+            <picture>
+              <source srcset="img/pictures/advantages-<%= advantages[i].img %>.webp" type="image/webp">
+              <img class="image image--rise" loading="lazy" src="img/pictures/advantages-<%= advantages[i].img %>.png" alt="">
+            </picture>
+          </div>
+          <div class="card-content py-5 px-2 py-md-7 px-md-7">
+            <div class="flex align-center mb-3">
+              <svg class="icon text-24 color-second mr-2">
+                <use xlink:href="img/icons.svg#check">
+              </svg>
+              <h3 class="font-alt text-18 text-md-20 text-lg-22 bold-7 lh-3"><%= advantages[i].title %></h3>
+            </div>
+            <p class="text-14 text-md-16 bold-4 lh-4 fade-70">
+              <%= advantages[i].text %>
+            </p>
+          </div>
+        </div>
+      </div>
+    <% } %>
+  </div>
+</section>
+
+<!-- Выбор -->
+
+<% var choice = [
+  {
+    item: 'top',
+    data: '',
+    img: '1',
+    title: 'Dentium',
+    text: 'Южная Корея'
+  },
+  {
+    item: 'bottom',
+    data: 'data-reverse',
+    img: '2',
+    title: 'Nobel Biocare',
+    text: 'США'
+  },
+  {
+    item: 'top',
+    data: '',
+    img: '3',
+    title: 'Straumann',
+    text: 'Швейцария'
+  },
+  {
+    item: 'bottom',
+    data: 'data-reverse',
+    img: '4',
+    title: 'Alpha Bio',
+    text: 'Израиль'
+  }
+] %>
+
+<section class="choice container container--sm flex justify-between gap-lg-5">
+  <div class="choice__content w-100 mb-10 mb-lg-0">
+    <h2 class="font-alt text text--uppercase text-26 text-md-36 text-lg-42 bold-7 lh-2 mb-5 mb-md-8">
+      ШИРОКИЙ ВЫБОР ИМПЛАНТАЦИОННЫХ СИСТЕМ
+    </h2>
+    <p class="text-14 text-md-16 bold-4 lh-4 fade-70 mb-5 mb-md-7">
+      Мы используем импланты, которые широко применяются в клиниках Америки, Европы и Азии и входят в ТОП-4 производителей имплантатов!
+    </p>
+    <ul class="listing gap-3 border-bottom mb-5 mb-md-9 pb-5 pb-md-9">
+      <li class="color-second">
+        <span class="color-black text-14 text-md-16 bold-4 lh-4 fade-70">Максимально короткий срок вживления</span>
+      </li>
+      <li class="color-second">
+        <span class="color-black text-14 text-md-16 bold-4 lh-4 fade-70">Подходят для различных методов имплантации</span>
+      </li>
+      <li class="color-second">
+        <span class="color-black text-14 text-md-16 bold-4 lh-4 fade-70">Отличный выбор в сегменте эконом-имплантации зубов</span>
+      </li>
+    </ul>
+    <p class="text-14 text-md-16 bold-6 lh-4">
+      Сотрудничество с ведущими мировыми специалистами, позволило разработать новейшие системы имплантатов, ориентированные на максимальную эффективность
+    </p>
+  </div>
+  <div class="choice__block relative bg-second gradient radius-8 overflow-hidden w-100 p-2 p-md-5 p-md-10">
+    <div class="bg-block radius-8 pointer-none">
+      <div class="choice__pack pack pack--rect w-100 h-100">
+        <picture>
+          <source srcset="img/pictures/lines.webp" type="image/webp">
+          <img class="image image--tr" loading="lazy" src="img/pictures/lines.png" alt="">
+        </picture>
+      </div>
+    </div>
+    <div class="grid gap-3 gap-md-5 relative">
+      <% for (var i = 0; i < choice.length; i++) { %>
+        <div class="choice__item choice__item--<%= choice[i].item %> col-6 relative linear duration-3" data-parallax="scroll" data-parallax-depth="0.5" <%= choice[i].data %>>
+          <div class="flex flex-column align-center justify-center relative bg-white shadow-box radius-8 w-100 h-100 py-5 px-3 px-md-5" data-waved>
+            <div class="pack pack--half w-100 my-5">
+              <picture>
+                <source srcset="img/pictures/choice-<%= choice[i].img %>.webp" type="image/webp">
+                <img class="image image--sd" loading="lazy" src="img/pictures/choice-<%= choice[i].img %>.png" alt="">
+              </picture>
+            </div>
+            <h4 class="font-alt text text--center text-16 text-md-20 text-lg-22 bold-7 lh-2 mb-3"><%= choice[i].title %></h4>
+            <div class="flex align-center">
+              <img class="icon text-18 text-md-24 mr-2" src="img/pictures/flag-<%= choice[i].img %>.svg" alt="">
+              <span class="text-14 text-md-16 bold-4"><%= choice[i].text %></span>
+            </div>
+          </div>
+        </div>
+      <% } %>
+    </div>
+  </div>
+</section>
+
+<!-- Цена -->
+
+<% var price = [
+  {
+    flag: '2',
+    name: 'Nobel Biocare (4 шт.)',
+    value: '299 200 ₽'
+  },
+  {
+    flag: '3',
+    name: 'Straumann (4 шт.)',
+    value: '242 000 ₽'
+  },
+  {
+    flag: '1',
+    name: 'Dentium (4 шт.)',
+    value: '180 400 ₽'
+  },
+  {
+    flag: '4',
+    name: 'Alpha Bio (4 шт.)',
+    value: '136 400 ₽'
+  }
+] %>
+
+<section class="price container container--distance bg-primary">
+  <h2 class="font-alt color-white text text--center text--uppercase text-26 text-md-36 text-lg-42 bold-7 lh-2 mb-5 mb-md-10">
+    цены на услуги
+  </h2>
+  <div class="relative bg-white radius-8 py-7 px-3 px-md-5 py-md-10 px-md-10">
+    <div class="price__bg bg-block radius-8 pointer-none">
+      <div class="pack pack--photo w-100 w-lg-50 h-100 ml-auto">
+        <picture>
+          <source srcset="img/pictures/jaw.webp" type="image/webp">
+          <img class="image image--sd image--br" loading="lazy" src="img/pictures/jaw.png" alt="">
+        </picture>
+      </div>
+    </div>
+    <div class="relative">
+      <h3 class="font-alt text text--center text--uppercase text-16 text-md-20 text-lg-24 bold-7 lh-2 mb-5 mb-md-10">
+        «Все на 4-х» с несъемным  протезированием
+      </h3>
+      <div class="price__content w-100">
+        <h4 class="text-14 text-md-16 bold-6 lh-1 mb-3 mb-md-5">1. Установка 4-х имплантов с мультиюнитами</h4>
+        <ul class="flex flex-column gap-3 gap-md-5 mb-5 mb-md-10">
+          <% for (var i = 0; i < price.length; i++) { %>
+            <li class="flex align-center justify-between">
+              <img class="icon text-18 text-md-20 text-lg-24 mr-1 mr-md-3" src="img/pictures/flag-<%= price[i].flag %>.svg" alt="">
+              <p class="flex align-end justify-between text-14 text-md-16 lh-2 w-100">
+                <span class="price__text bold-5"><%= price[i].name %></span>
+                <span class="price__dashed fade-40 w-100"></span>
+                <span class="price__text bold-7"><%= price[i].value %></span>
+              </p>
+            </li>
+          <% } %>
+        </ul>
+        <h4 class="text-14 text-md-16 bold-6 lh-1 mb-3 mb-md-5">2. Временное протезирование</h4>
+        <ul class="flex flex-column gap-3 gap-md-5 mb-3">
+          <li class="flex align-end justify-between text-14 text-md-16 lh-2 w-100">
+            <span class="price__text bold-5">
+              Акриловый протез (временный) <br>с опорой на 4-х имплантах
+            </span>
+            <span class="price__dashed fade-40 w-100"></span>
+            <span class="price__text bold-7">51 700 ₽</span>
+          </li>
+        </ul>
+        <p class="text-14 text-md-16 bold-4 lh-4 fade-60 mb-5 mb-md-8">Срок эксплуатации временного протеза 4-9 месяцев</p>
+        <h4 class="text-14 text-md-16 bold-6 lh-1 mb-3 mb-md-5">3. Постоянное протезирование</h4>
+        <ul class="flex flex-column gap-3 gap-md-5 mb-5 mb-md-10">
+          <li class="flex align-end justify-between text-14 text-md-16 lh-2 w-100">
+            <span class="price__text bold-5">Акриловый протез <br class="d-block d-md-none"> с опорой на 4-х имплантах</span>
+            <span class="price__dashed fade-40 w-100"></span>
+            <span class="price__text bold-7">181 500 ₽</span>
+          </li>
+          <li class="flex align-end justify-between text-14 text-md-16 lh-2 w-100">
+            <span class="price__text bold-5">
+              Метало-керамический протез <br> с опорой на 4-х имплантах
+            </span>
+            <span class="price__dashed fade-40 w-100"></span>
+            <span class="price__text bold-7">214 500 ₽</span>
+          </li>
+        </ul>
+        <button class="btn btn--second btn--lg btn--fill gradient w-100" data-waved>
+          <span class="d-none d-md-inline">Записаться на бесплатную консультацию</span>
+          <span class="d-inline d-md-none">Бесплатная консультация</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Условия -->
+
+<section class="conditions container container--sm">
+  <h2 class="font-alt text text--center text--uppercase text-26 text-md-36 text-lg-42 bold-7 lh-2 mb-5 mb-md-10">максимально комфортные условия</h2>
+  <div class="grid gap-4 gap-lg-8 pt-lg-5 mb-4 mb-md-8">
+    <div class="col-12 col-lg-6">
+      <div class="card h-100 p-2 p-md-4" data-waved>
+        <div class="conditions__pack pack pack--rect bg-grey radius-8 w-100 h-100">
+          <div class="loader">
+            <span class="loader-progress">
+              <svg class="loader-icon icon">
+                <use xlink:href="img/icons.svg#loader">
+              </svg>
+            </span>
+          </div>
+          <picture>
+            <source srcset="img/pictures/conditions-1.webp" type="image/webp">
+            <img class="image image--rise" loading="lazy" src="img/pictures/conditions-1.png" alt="">
+          </picture>
+          <div class="conditions__bg bg-block pointer-none">
+            <div class="flex flex-column align-center justify-end relative zi-1 color-white w-100 h-100 py-5 px-3 py-md-10 px-md-8">
+              <h3 class="font-alt text text--center text--uppercase text-18 text-md-20 bold-7 lh-3 mb-3">
+                РЕНТГЕН <span class="color-second">НЕ ВСТАВАЯ С КРЕСЛА</span>
+              </h3>
+              <p class="text text--center text-14 text-md-16 bold-3 lh-4">
+                Удобство за счет экономии Вашего времени  и средств, <br>
+                и к тому же, в 10-ки раз безопаснее  и информативнее <br>
+                обычного рентгена.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-lg-6">
+      <div class="card h-100 p-2 p-md-4" data-waved>
+        <div class="conditions__pack pack pack--rect bg-grey radius-8 w-100 h-100">
+          <div class="loader">
+            <span class="loader-progress">
+              <svg class="loader-icon icon">
+                <use xlink:href="img/icons.svg#loader">
+              </svg>
+            </span>
+          </div>
+          <picture>
+            <source srcset="img/pictures/conditions-2.webp" type="image/webp">
+            <img class="image image--rise" loading="lazy" src="img/pictures/conditions-2.png" alt="">
+          </picture>
+          <div class="conditions__bg bg-block pointer-none">
+            <div class="flex flex-column align-center justify-end relative zi-1 color-white w-100 h-100 py-5 px-3 py-md-10 px-md-8">
+              <h3 class="font-alt text text--center text--uppercase text-18 text-md-20 bold-7 lh-3 mb-3">
+                КОМФОРТ ЛЕЧЕНИЯ <span class="color-second">В КРЕСЛАХ A-DEC (США)</span>
+              </h3>
+              <p class="text text--center text-14 text-md-16 bold-3 lh-4">
+                Специально подобранный уровень давления обеспечивает <br>
+                непревзойденный комфорт. Вам удобно - Вы более <br>
+                расслаблены и спокойны.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="conditions__block radius-8 p-2">
+    <div class="conditions__content flex align-center justify-between radius-8 shadow-drop py-6 px-3 py-md-8 px-md-5 py-lg-4 px-lg-4">
+      <div class="conditions__info flex flex-column w-100 mb-5 mb-lg-0 py-lg-5 px-lg-6">
+        <h4 class="font-alt text text--uppercase text-20 text-md-22 text-lg-24 bold-7 lh-2 mb-4">ПЕРВОКЛАССНЫЙ СЕРВИС</h4>
+        <p class="text-14 text-md-16 bold-4 lh-4 fade-70">
+          Мы Вас встретим, угостим вкуснейшим чаем или кофе. Лечим во время просмотра любимого фильма. Закажем такси. Вам не нужно идти в аптеку – мы предоставим комплект необходимых препаратов
+        </p>
+      </div>
+      <div class="conditions__image pack bg-grey radius-8 w-100">
+        <div class="loader">
+          <span class="loader-progress">
+            <svg class="loader-icon icon">
+              <use xlink:href="img/icons.svg#loader">
+            </svg>
+          </span>
+        </div>
+        <picture>
+          <source srcset="img/pictures/conditions-3.webp" type="image/webp">
+          <img class="image image--rise" loading="lazy" src="img/pictures/conditions-3.png" alt="">
+        </picture>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Отзывы -->
+
+<% var reviews = [
+  {
+    number: '4.9',
+    img: 'yandex'
+  },
+  {
+    number: '4.3',
+    img: 'pro'
+  },
+  {
+    number: '5.0',
+    img: '2gis'
+  }
+] %>
+
+<section class="reviews container container--distance container--sm bg-grey">
+  <h2 class="font-alt text text--center text--uppercase text-26 text-md-36 text-lg-42 bold-7 lh-2 mb-5 mb-md-10">клиенты ценят нашу работу</h2>
+  <div class="grid gap-4 gap-md-6 gap-lg-9 pt-lg-5">
+    <% for (var i = 0; i < reviews.length; i++) { %>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="reviews__card flex flex-column align-center relative bg-white radius-8 overflow-hidden px-3 px-md-6 pt-10 h-100" data-waved>
+          <div class="reviews__circle flex align-center justify-center radius-max">
+            <span class="font-alt text-36 bold-7"><%= reviews[i].number %></span>
+          </div>
+          <div class="pack pack--half w-100">
+            <img class="image image--sd" src="img/pictures/<%= reviews[i].img %>.svg" alt="">
+          </div>
+          <div class="radius-3 overflow-hidden">
+            <div class="reviews__items flex flex-column gap-3 overflow-auto w-100">
+              <div class="reviews__item bg-white radius-8 py-5 px-4 px-md-5">
+                <div class="flex align-center mb-3 mb-md-5">
+                  <div class="flex align-center justify-center icon bg-blue text-40 radius-max mr-4">
+                    <span class="color-white text text--center text--uppercase text-14 bold-6">Т</span>
+                  </div>
+                  <div class="flex flex-column">
+                    <h3 class="text-14 bold-5 mb-1">Татьяна</h3>
+                    <div class="flex align-center gap-1 color-yellow text-16">
+                      <svg class="icon">
+                        <use xlink:href="img/icons.svg#star">
+                      </svg>
+                      <svg class="icon">
+                        <use xlink:href="img/icons.svg#star">
+                      </svg>
+                      <svg class="icon">
+                        <use xlink:href="img/icons.svg#star">
+                      </svg>
+                      <svg class="icon">
+                        <use xlink:href="img/icons.svg#star">
+                      </svg>
+                      <svg class="icon">
+                        <use xlink:href="img/icons.svg#star">
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <p class="text-14 bold-4 lh-4 fade-70">
+                  Отличная стоматологическая клиника, с хорошим и современным оборудованием, удобными креслами. Во время лечения можно посмотреть фильм, экран монитора расположен...
+                </p>
+              </div>
+              <div class="reviews__item bg-white radius-8 p-3 p-md-5">
+                <div class="flex align-center justify-between mb-3 mb-md-5">
+                  <div class="flex flex-column color-blue mr-2">
+                    <span class="text-14 bold-6">Пациент</span>
+                    <span class="text-14 bold-6">+7-918-25XXXXX</span>
+                  </div>
+                  <div class="reviews__value flex align-center text-12 bold-6 radius-2 overflow-hidden">
+                    <span class="color-white bg-green-light p-2">+2.0</span>
+                    <span class="color-green-light p-2">отлично</span>
+                  </div>
+                </div>
+                <p class="text-14 bold-4 lh-4 fade-70">
+                  Отличная стоматологическая клиника, с хорошим и современным оборудованием, удобными креслами. Во время лечения можно посмотреть фильм, экран монитора расположен...
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% } %>
+  </div>
+</section>
+
 <%= require('./includes/footer.html').default %>
