@@ -67,7 +67,7 @@
         <span class="link text-14 bold-7">+7(928)210-90-60</span>
       </div>
     </a>
-    <button class="btn btn--second btn--lg btn--contur btn--swipe color-black overflow-hidden" data-waved>
+    <button class="btn btn--second btn--lg btn--contur btn--swipe color-black overflow-hidden" data-waved data-fancybox-dialog data-type="ajax" data-src="dialogs/dialog-consultation.html">
       <span class="header__btn-text header__btn-text--1">Записаться на консультацию</span>
       <span class="header__btn-text header__btn-text--2">Консультация</span>
     </button>
@@ -75,11 +75,44 @@
 
   <!-- Навигация -->
 
-  <% var nav = ['Результаты работы', 'Как записаться', 'О лечении', 'Цены на услуги', 'Отзывы', 'Врачи', 'Вопрос-ответ', 'Контакты'] %>
+  <% var nav = [
+    {
+      id: 'result',
+      name: 'Результаты работы'
+    },
+    {
+      id: 'stages',
+      name: 'О лечении'
+    },
+    {
+      id: 'advantages',
+      name: 'Преимущества'
+    },
+    {
+      id: 'price',
+      name: 'Цены на услуги'
+    },
+    {
+      id: 'reviews',
+      name: 'Отзывы'
+    },
+    {
+      id: 'personal',
+      name: 'Врачи'
+    },
+    {
+      id: 'questions',
+      name: 'Вопрос-ответ'
+    },
+    {
+      id: 'contacts',
+      name: 'Контакты'
+    }
+  ] %>
 
   <nav class="nav container d-none d-lg-flex align-center justify-between sticky zi-3 bg-white py-3">
     <% for (var i = 0; i < nav.length; i++) { %>
-      <a class="btn btn--second link color-black radius-2 bold-4 py-2 px-1" data-waved data-scroll="top" href="#"><%= nav[i] %></a>
+      <a class="btn btn--second link color-black radius-2 bold-4 py-2 px-1" data-waved data-scroll="top" href="#<%= nav[i].id %>"><%= nav[i].name %></a>
     <% } %>
   </nav>
 
@@ -106,7 +139,7 @@
       </div>
       <div class="mobile__nav flex flex-column gap-5 relative py-8 px-4 ease duration-9 delay-5">
         <% for (var i = 0; i < nav.length; i++) { %>
-          <a class="link text-18 bold-4 w-max" data-scroll="top" href="#"><%= nav[i] %></a>
+          <a class="link text-18 bold-4 w-max" data-scroll="top" href="#<%= nav[i].id %>"><%= nav[i].name %></a>
         <% } %>
       </div>
       <div class="mobile__footer relative mt-auto px-4 pt-4 pb-10 ease duration-5 delay-9">

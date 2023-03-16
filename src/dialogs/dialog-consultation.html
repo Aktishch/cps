@@ -1,0 +1,30 @@
+<div class="dialog dialog--sm radius-8 py-10 px-5 px-md-10">
+  <h2 class="font-alt text-22 text-md-26 bold-7 lh-2 mb-5">Записаться <br>на консультацию</h2>
+  <p class="text-14 text-md-16 bold-4 lh-4 fade-70 mb-5">Заполните данные и мы свяжемся с Вами в ближайшее время</p>
+  <form class="form mb-5" data-form="submit">
+    <input type="hidden" value="Консультация" name="theme">
+    <label class="form-label mb-4" data-label="input">
+      <span class="text-16 bold-6 mb-2">Ваш телефон</span>
+      <div class="form-wrapper">
+        <div class="input-cover">
+          <input class="input" data-input="tel" type="tel" placeholder="+7 (_ _ _) _ _ _ - _ _ - _ _" name="tel">
+        </div>
+        <span class="form-error anim anim--fade" data-error>Пожалуйста, введите ваш номер!</span>
+      </div>
+    </label>
+    <label class="form-label mb-6 mb-md-8" data-label="input">
+      <span class="text-16 bold-6 mb-2">Ваше имя</span>
+      <div class="form-wrapper">
+        <div class="input-cover">
+          <input class="input" data-input="name" type="text" name="name">
+        </div>
+        <span class="form-error anim anim--fade" data-error>Пожалуйста, введите ваше имя!</span>
+      </div>
+    </label>
+    <button class="btn btn--second btn--lg btn--fill gradient w-max" data-waved type="submit">Отправить</button>
+  </form>
+  <div class="link text-12 bold-4 lh-3 fade-50 pointer w-md-max" data-fancybox-dialog data-type="ajax" data-src="dialogs/dialog-politics.html">
+    Отправляя форму Вы даете согласие на обработку <br>
+    Ваших персональных данных
+  </div>
+</div>

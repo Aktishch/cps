@@ -155,6 +155,32 @@
   }
 }
 
+// Квиз
+.quiz {
+  background-image: linear-gradient(253.69deg, rgba(174, 99, 46, 0.2) 0%, var(--color-none) 61.32%);
+
+  &__bg {
+    mix-blend-mode: soft-light;
+  }
+
+  &-slider {
+    &[data-quiz="stop"] .swiper-button-next {
+      pointer-events: none;
+      opacity       : 0.5;
+    }
+
+    &[data-quiz-end] &-bottom {
+      visibility: hidden;
+      opacity   : 0;
+    }
+
+    &__btn {
+      left : 0;
+      right: 0;
+    }
+  }
+}
+
 // Результат
 .result {
   &-slide {
@@ -342,12 +368,6 @@
       max-width: 510px;
     }
   }
-
-  @media(max-width: $lg) {
-    &__bg {
-      opacity: 0.3;
-    }
-  }
 }
 
 // Условия
@@ -469,8 +489,12 @@
   }
 
   &__items {
-    height        : 300px;
-    padding-bottom: 60px;
+    height         : 300px;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 
   &__item {
@@ -479,5 +503,81 @@
 
   &__value {
     background-color: var(--color-green-light-20);
+  }
+
+  @media(max-width: $md) {
+    &__pack {
+      &::before {
+        padding-top: 30%;
+      }
+    }
+  }
+}
+
+// Персонал
+.personal {
+  &__pack {
+    background-image: linear-gradient(180deg, var(--color-black-10) 0%, var(--color-none) 100%);
+    max-width       : 300px;
+  }
+
+  @media(min-width: $md) and (hover) {
+    &__text {
+      visibility: hidden;
+      opacity   : 0;
+    }
+  }
+
+  @media(hover) {
+    &-slide:hover &__pack {
+      transform: scale(1.1);
+    }
+
+    &-slide:hover &__text {
+      visibility: visible;
+      opacity   : 1;
+    }
+  }
+
+  @media(max-width: $md) {
+    &__pack {
+      max-width: 200px;
+    }
+  }
+}
+
+// Вопросы
+.questions {
+  &__items {
+    border-top: 1px solid var(--color-black-20);
+  }
+
+  &__item {
+    border-bottom: 1px solid var(--color-black-20);
+  }
+
+  &__item[data-accordion="active"] &__arrow {
+    transform: rotate(-90deg);
+  }
+
+  &__pack {
+    background-image: linear-gradient(180deg, var(--color-white-60) 0%, var(--color-none) 100%);
+  }
+}
+
+// Галерея
+.gallery {
+  &-wrapper {
+    transition-timing-function: linear !important;
+  }
+
+  @media(max-width: $md) {
+    & {
+      padding-bottom: 0;
+    }
+
+    &__pack {
+      border-radius: 12px;
+    }
   }
 }

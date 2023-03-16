@@ -16,7 +16,8 @@
   }
 
   &--textarea {
-    height: auto;
+    height       : auto;
+    border-radius: 30px !important;
   }
 
   &--error {

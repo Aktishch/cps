@@ -6,6 +6,67 @@ import quiz from '../ts/quiz'
 
 const init = () => {
 
+  // const quizImages = new Swiper('.quiz-images .swiper', {
+
+  //   effect: 'cube',
+  //   slidesPerView: 1,
+  //   slidesPerGroup: 1,
+  //   allowTouchMove: false
+
+  // })
+
+  const quizSlider = new Swiper('.quiz-slider .swiper', {
+
+    navigation: {
+
+      prevEl: '.quiz-slider .swiper-button-prev',
+      nextEl: '.quiz-slider .swiper-button-next'
+
+    },
+
+    pagination: {
+
+      el: '.quiz-slider .swiper-pagination',
+      type: 'custom',
+
+      renderCustom: (swiper, current, total) => {
+
+        return total - current
+
+      }
+
+    },
+
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+    spaceBetween: 30,
+    allowTouchMove: false,
+    watchSlidesProgress: true,
+
+    on: {
+
+      slideChange: (swiper) => {
+
+        // quizImages.slideTo(swiper.activeIndex)
+
+        quiz.checkQuizSlide(swiper.visibleSlides[0])
+
+        if (swiper.visibleSlides[0] == swiper.slides[swiper.slides.length - 1]) {
+
+          swiper.el.closest('[data-quiz]').setAttribute('data-quiz-end', '')
+
+        } else {
+
+          swiper.el.closest('[data-quiz]').removeAttribute('data-quiz-end')
+
+        }
+
+      }
+
+    }
+
+  })
+
   const sliderResult = new Swiper('.result-slider .swiper', {
 
     pagination: {
@@ -52,7 +113,6 @@ const init = () => {
     slidesPerView: 1.1,
     slidesPerGroup: 1,
     spaceBetween: 16,
-    // freeMode: true,
 
     breakpoints: {
 
@@ -70,7 +130,98 @@ const init = () => {
 
       }
 
+    }
+
+  })
+
+  const sliderPersonal = new Swiper('.personal-slider .swiper', {
+
+    pagination: {
+
+      el: '.personal-slider .swiper-pagination',
+      clickable: true
+
     },
+
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+    spaceBetween: 40,
+    speed: 1000,
+    centeredSlides: true,
+    loop: true,
+    grabCursor: true,
+
+    breakpoints: {
+
+      [media.sm]: {
+
+        slidesPerView: 1.8
+
+      },
+
+      [media.md]: {
+
+        slidesPerView: 2.2
+
+      },
+
+      [media.lg]: {
+
+        slidesPerView: 2.7
+
+      }
+
+    },
+
+    autoplay: {
+
+      delay: 3000,
+      stopOnLastSlide: false,
+      disableOnInteraction: false
+
+    }
+
+  })
+
+  const sliderGallery = new Swiper('.gallery-slider .swiper', {
+
+    slidesPerView: 0.8,
+    spaceBetween: 16,
+    speed: 15000,
+    centeredSlides: true,
+    loop: true,
+    allowTouchMove: false,
+
+    breakpoints: {
+
+      [media.md]: {
+
+        slidesPerView: 1.2,
+
+      },
+
+      [media.lg]: {
+
+        slidesPerView: 1.4,
+        spaceBetween: 32
+
+      },
+
+      [media.xl]: {
+
+        slidesPerView: 1.8,
+
+      }
+
+    },
+
+    autoplay: {
+
+      delay: 0,
+      stopOnLastSlide: false,
+      disableOnInteraction: false
+
+    }
 
   })
 
