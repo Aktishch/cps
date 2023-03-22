@@ -10,54 +10,53 @@ const formSubmit = (event: Event): void => {
   if (!formValidate.init(form)) return
 
   const formData: FormData = new FormData(form)
-  const queryString: string = new URLSearchParams(formData as URLSearchParams).toString()
   const submitBtn = form.querySelector('button[type="submit"]') as HTMLButtonElement
 
   let requestUrl: string = ''
 
-  if (form.dataset.form == 'submit') {
+  requestUrl = '/ajax/submit-handler.php'
+  submitBtn.setAttribute('disabled', 'disabled')
 
-    requestUrl = '/ajax/submit-handler.php'
-    submitBtn.setAttribute('disabled', 'disabled')
+  dialog.open('fancybox-loading', '/dialogs/loading.php')
 
-    dialog.open('fancybox-loading', '/dialogs/loading.html')
+  fetch(requestUrl, {
 
-    fetch(requestUrl, {
+    method: 'POST',
+    body: formData
 
-      method: 'POST',
-      body: formData
+  }).then((response: Response): void => {
 
-    }).then((response: Response): void => {
+    response.text()
 
-      response.text()
+  }).then((): void => {
 
-    }).then((): void => {
+    dialog.close()
 
-      dialog.close()
+    if (form.dataset.form == 'submit') {
 
-      dialog.open('fancybox-dialog', '/dialogs/dialog-submit.html')
+      dialog.open('fancybox-dialog', '/dialogs/dialog-submit.php')
 
       form.reset()
 
       submitBtn.removeAttribute('disabled')
 
-    }).catch((error: string): void =>
+    }
 
-      console.log('The form has not been sent', error)
+    if (form.dataset.form == 'quiz') {
 
-    )
+      form.remove()
 
-  }
+      const quizResult = document.querySelector('*[data-quiz-result]') as HTMLElement
 
-  if (form.dataset.form == 'params') {
+      quizResult.classList.remove('d-none')
 
-    requestUrl = `/dialogs/dialog-authorization.html?${queryString}`
+    }
 
-    dialog.close()
+  }).catch((error: string): void =>
 
-    dialog.open('fancybox-dialog', requestUrl)
+    console.log('The form has not been sent', error)
 
-  }
+  )
 
 }
 

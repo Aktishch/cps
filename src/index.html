@@ -102,8 +102,8 @@
       </picture>
     </div>
   </div>
-  <form class="grid gap-md-5 gap-lg-8 relative" data-form="submit">
-    <div class="col-12 col-lg-6">
+  <form class="grid gap-lg-8 relative w-100" data-form="quiz">
+    <div class="col-12 col-lg-6 ease-out duration-4 anim anim--right" data-anim="hidden">
       <div class="quiz-slider flex flex-column color-white radius-8 h-100 py-7 px-5 py-md-10 px-lg-8" data-quiz="stop">
         <div class="swiper mx-0">
           <div class="swiper-wrapper">
@@ -111,7 +111,7 @@
               <p class="text-16 text-md-18 text-lg-20 bold-4 lh-3 mb-5 mb-md-8">
                 Ответьте на несколько простых вопросов и получите <span class="bold-6"></span>бесплатную консультацию врача!</span>
               </p>
-              <h3 class="font-alt text-22 text-md-28 text-lg-34 bold-7 lh-2 mb-5 mb-md-10">
+              <h3 class="quiz__subtitle font-alt text-22 text-md-28 bold-7 lh-2 mb-5 mb-md-10">
                 Какую челюсть вы хотите восстановить?
               </h3>
               <div class="flex flex-column gap-3 mb-6">
@@ -133,7 +133,7 @@
               <p class="text-16 text-md-18 text-lg-20 bold-4 lh-3 mb-5 mb-md-8">
                 Ответьте на несколько простых вопросов и получите <span class="bold-6"></span>бесплатную консультацию врача!</span>
               </p>
-              <h3 class="font-alt text-22 text-md-28 text-lg-34 bold-7 lh-2 mb-5 mb-md-10">
+              <h3 class="quiz__subtitle font-alt text-22 text-md-28 bold-7 lh-2 mb-5 mb-md-10">
                 Какую ортопедическую конструкцию хотите установить на имплантаты?
               </h3>
               <div class="flex flex-column gap-3 mb-6">
@@ -151,7 +151,7 @@
               <p class="text-16 text-md-18 text-lg-20 bold-4 lh-3 mb-5 mb-md-8">
                 Ответьте на несколько простых вопросов и получите <span class="bold-6"></span>бесплатную консультацию врача!</span>
               </p>
-              <h3 class="font-alt text-22 text-md-28 text-lg-34 bold-7 lh-2 mb-5 mb-md-10">
+              <h3 class="quiz__subtitle font-alt text-22 text-md-28 bold-7 lh-2 mb-5 mb-md-10">
                 Выберите систему имплантации
               </h3>
               <div class="flex flex-column gap-3 mb-6">
@@ -173,7 +173,7 @@
               <p class="text-16 text-md-18 text-lg-20 bold-4 lh-3 mb-5 mb-md-8">
                 Ответьте на несколько простых вопросов и получите <span class="bold-6"></span>бесплатную консультацию врача!</span>
               </p>
-              <h3 class="font-alt text-22 text-md-28 text-lg-34 bold-7 lh-2 mb-5 mb-md-10">
+              <h3 class="quiz__subtitle font-alt text-22 text-md-28 bold-7 lh-2 mb-5 mb-md-10">
                 Когда будет удобно прийти на консультацию?
               </h3>
               <label class="form-label mb-5">
@@ -196,7 +196,7 @@
               <p class="text-16 text-md-18 text-lg-20 bold-4 lh-3 mb-5 mb-md-8">
                 Мы подготовим развернутые ответы на ваши вопросы! Точную стоимость лечения рассчитает стоматолог-хирург после первой консультации
               </p>
-              <h3 class="font-alt text-22 text-md-28 text-lg-34 bold-7 lh-2 mb-5 mb-md-10">
+              <h3 class="quiz__subtitle font-alt text-22 text-md-28 bold-7 lh-2 mb-5 mb-md-10">
                 Оставьте свои контакты, чтобы мы могли связаться с вами
               </h3>
               <label class="form-label mb-5" data-label="input">
@@ -212,7 +212,7 @@
                   <span class="form-error anim anim--fade" data-error>Пожалуйста, введите ваше имя!</span>
                 </div>
               </label>
-              <label class="form-label mb-5 mb-md-8" data-label="input">
+              <label class="form-label" data-label="input">
                 <div class="form-wrapper">
                   <div class="input-cover">
                     <input class="input pl-10" data-input="tel" type="tel" placeholder="+7 (_ _ _) _ _ _ - _ _ - _ _" name="tel">
@@ -225,29 +225,34 @@
                   <span class="form-error anim anim--fade" data-error>Пожалуйста, введите ваш номер!</span>
                 </div>
               </label>
-              <div class="flex flex-wrap align-center gap-5 gap-md-8">
-                <button class="btn btn--second btn--lg btn--fill gradient" data-waved type="submit">Отправить</button>
-                <div class="text-12 bold-4 lh-4 pointer w-100 w-md-max" data-fancybox-dialog data-type="ajax" data-src="dialogs/dialog-politics.html">
-                  <span class="fade-60">Отправляя форму, вы даете свое <br>
-                  согласие на</span> обработку персональных данных
-                </div>
-              </div>
             </div>
           </div>
         </div>
-        <div class="quiz-slider-bottom flex align-center gap-4 fade-100 mt-auto pb-10 ease duration-2">
-          <button class="quiz__btn swiper-button-prev default btn btn--second btn--lg btn--fill gradient w-auto mt-0" data-waved>Назад</button>
-          <button class="quiz__btn swiper-button-next default btn btn--second btn--lg btn--fill gradient w-auto mt-0" data-waved>Следующий вопрос</button>
+        <div class="quiz-slider-bottom mt-auto pt-5 pt-lg-10 pb-lg-10">
+          <div class="quiz-slider-btns flex align-center gap-4">
+            <button class="quiz__btn swiper-button-prev default btn btn--second btn--lg btn--fill gradient w-auto mt-0" data-waved>Назад</button>
+            <button class="quiz__btn swiper-button-next default btn btn--second btn--lg btn--fill gradient w-auto mt-0" data-waved>
+              <span class="d-none d-md-block">Следующий вопрос</span>
+              <span class="d-md-none">Вперёд</span>
+            </button>
+          </div>
+          <div class="quiz-slider-submit d-none flex-wrap align-center gap-5 gap-md-8">
+            <button class="btn btn--second btn--lg btn--fill gradient" data-waved type="submit">Отправить</button>
+            <div class="text-12 bold-4 lh-4 pointer w-100 w-md-max" data-fancybox-dialog data-type="ajax" data-src="dialogs/dialog-politics.html">
+              <span class="fade-60">Отправляя форму, вы даете свое <br>
+              согласие на</span> <span class="text text--underline">обработку персональных данных</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="d-none d-md-block col-12 col-lg-6">
+    <div class="d-none d-lg-block col-12 col-lg-6 ease-out duration-4 anim anim--left" data-anim="hidden">
       <div class="quiz-detail relative bg-white radius-8 h-100">
-        <div class="swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide flex flex-column h-100 py-8 px-6">
+        <div class="swiper h-100">
+          <div class="swiper-wrapper h-100">
+            <div class="swiper-slide flex flex-column justify-between h-100 py-8 px-6">
               <div class="flex align-center justify-between gap-5">
-                <div class="flex flex-column">
+                <div class="flex flex-column mb-5">
                   <span class="text-16 bold-4 fade-60 mb-1">Услугу оказывает</span>
                   <h4 class="font-alt text-20 bold-7 lh-2">Вовк Анна Владимировна</h4>
                 </div>
@@ -272,9 +277,9 @@
                 <h5 class="font-alt text-16 bold-6 lh-2">Импланты от лучших производителей</h5>
               </div>
             </div>
-            <div class="swiper-slide flex flex-column h-100 py-8 px-6">
+            <div class="swiper-slide flex flex-column justify-between h-100 py-8 px-6">
               <div class="flex align-center justify-between gap-5">
-                <div class="flex flex-column">
+                <div class="flex flex-column mb-5">
                   <span class="text-16 bold-4 fade-60 mb-1">Услугу оказывает</span>
                   <h4 class="font-alt text-20 bold-7 lh-2">Вовк Анна Владимировна</h4>
                 </div>
@@ -299,9 +304,9 @@
                 <h5 class="font-alt text-16 bold-6 lh-2">Импланты от лучших производителей</h5>
               </div>
             </div>
-            <div class="swiper-slide flex flex-column h-100 py-8 px-6">
+            <div class="swiper-slide flex flex-column justify-between h-100 py-8 px-6">
               <div class="flex align-center justify-between gap-5">
-                <div class="flex flex-column">
+                <div class="flex flex-column mb-5">
                   <span class="text-16 bold-4 fade-60 mb-1">Услугу оказывает</span>
                   <h4 class="font-alt text-20 bold-7 lh-2">Вовк Анна Владимировна</h4>
                 </div>
@@ -326,9 +331,9 @@
                 <h5 class="font-alt text-16 bold-6 lh-2">Импланты от лучших производителей</h5>
               </div>
             </div>
-            <div class="swiper-slide flex flex-column h-100 py-8 px-6">
+            <div class="swiper-slide flex flex-column justify-between h-100 py-8 px-6">
               <div class="flex align-center justify-between gap-5">
-                <div class="flex flex-column">
+                <div class="flex flex-column mb-5">
                   <span class="text-16 bold-4 fade-60 mb-1">Услугу оказывает</span>
                   <h4 class="font-alt text-20 bold-7 lh-2">Вовк Анна Владимировна</h4>
                 </div>
@@ -353,11 +358,38 @@
                 <h5 class="font-alt text-16 bold-6 lh-2">Импланты от лучших производителей</h5>
               </div>
             </div>
+            <div class="swiper-slide flex flex-column justify-between h-100 py-8 px-6">
+              <div class="flex flex-column align-center justify-center text text--center h-100">
+                <div class="quiz__image pack pack--box bg-grey radius-max w-100 mb-5 mb-md-10">
+                  <picture>
+                    <source srcset="img/pictures/person.webp" type="image/webp">
+                    <img class="image" src="img/pictures/person.png" alt="">
+                  </picture>
+                </div>
+                <h4 class="font-alt text-18 text-md-20 text-lg-22 bold-7 lh-3 mb-1">Вовк Анна</h4>
+                <p class="text-14 text-md-16 bold-4 lh-4 fade-70 mb-5">Врач стоматолог-терапевт</p>
+                <p class="text-14 text-md-16 bold-4 lh-4">
+                  Опыт — 13 лет. Специалист по лечению зубов с микроскопом. Перфекционист в своей работе. Участник российских и международных конференций.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </form>
+  <div class="quiz__result d-none flex flex-column align-center justify-center relative radius-8 p-5 p-md-10" data-quiz-result>
+    <div class="quiz__success color-second text-50">
+      <svg class="icon zoom-4">
+        <use xlink:href="img/icons.svg#success">
+      </svg>
+    </div>
+    <h3 class="font-alt color-white text text--center text-16 text-md-24 text-lg-36 bold-7 lh-2">
+      Спасибо, данные успешно отправлены. <br class="d-none d-md-block">
+      Мы перезвоним вам в течение 30 минут <br class="d-none d-md-block">
+      для уточнения информации!
+    </h3>
+  </div>
 </section>
 
 <!-- Результат -->
