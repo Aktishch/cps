@@ -5,7 +5,7 @@
   justify-content: center;
   position       : relative;
   user-select    : none;
-  color          : var(--color-primary);
+  color          : var(--color-second);
   border         : 1px solid var(--color-gray);
   transition     : 0.2s linear;
   cursor         : pointer;
@@ -39,21 +39,22 @@
   }
 
   &--radio {
-    min-width    : 20px;
-    width        : 20px;
-    height       : 20px;
+    min-width    : 24px;
+    width        : 24px;
+    height       : 24px;
     border-radius: 50%;
+    background   : linear-gradient(180deg, var(--color-none) 18.23%, var(--color-black-10) 100%), var(--color-white);
 
     &::after {
-      content         : "";
-      display         : block;
-      width           : 12px;
-      height          : 12px;
-      background-color: currentColor;
-      border-radius   : inherit;
-      transform       : scale(0);
-      transition      : opacity 0.1s linear, transform 0.1s linear;
-      opacity         : 0;
+      content      : "";
+      display      : block;
+      width        : 12px;
+      height       : 12px;
+      background   : linear-gradient(180deg, var(--color-none) 0%, var(--color-black-10) 100%), currentColor;
+      border-radius: inherit;
+      transform    : scale(0);
+      transition   : opacity 0.1s linear, transform 0.1s linear;
+      opacity      : 0;
     }
 
     &:checked {
@@ -117,11 +118,11 @@
     opacity       : 0.5;
   }
 
-  @media(hover) {
-    &:hover {
-      box-shadow: 0 0 0 4px var(--color-primary-40);
-    }
-  }
+  // @media(hover) {
+  //   &:hover {
+  //     box-shadow: 0 0 0 4px var(--color-primary-40);
+  //   }
+  // }
 }
 
 @keyframes switch-checked {

@@ -2,6 +2,7 @@ import { Fancybox } from '@fancyapps/ui'
 import ru from '@fancyapps/ui/src/Fancybox/l10n/ru'
 import '@fancyapps/ui/dist/fancybox.css'
 
+import airDatepicker from './air-datepicker'
 import waved from '../ts/waved'
 
 const init = () => {
@@ -21,6 +22,7 @@ const init = () => {
 
       done: (fancybox, slide) => {
 
+        airDatepicker.init()
         waved.init()
 
       }

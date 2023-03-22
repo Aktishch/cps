@@ -32,7 +32,7 @@
       <label class="form-label w-100 w-md-auto" data-label="input">
         <div class="form-wrapper">
           <div class="input-cover">
-            <input class="input" data-input="tel" type="tel" placeholder="+7 (_ _ _) _ _ _ - _ _ - _ _" name="tel">
+            <input class="main__input input" data-input="tel" type="tel" placeholder="+7 (_ _ _) _ _ _ - _ _ - _ _" name="tel">
           </div>
           <span class="form-error anim anim--fade" data-error>Пожалуйста, введите ваш номер!</span>
         </div>
@@ -102,30 +102,258 @@
       </picture>
     </div>
   </div>
-  <form class="grid gap-lg-8 relative" data-form="submit">
+  <form class="grid gap-md-5 gap-lg-8 relative" data-form="submit">
     <div class="col-12 col-lg-6">
-      <div class="quiz-slider" data-quiz="stop">
-        <div class="swiper">
+      <div class="quiz-slider flex flex-column color-white radius-8 h-100 py-7 px-5 py-md-10 px-lg-8" data-quiz="stop">
+        <div class="swiper mx-0">
           <div class="swiper-wrapper">
-            <div class="swiper-slide h-auto" data-quiz-slide>
-              <div class="h-100">
-                <input class="switch switch--radio" type="radio" value="radio-1" name="radio">
+            <div class="swiper-slide h-100" data-quiz-slide>
+              <p class="text-16 text-md-18 text-lg-20 bold-4 lh-3 mb-5 mb-md-8">
+                Ответьте на несколько простых вопросов и получите <span class="bold-6"></span>бесплатную консультацию врача!</span>
+              </p>
+              <h3 class="font-alt text-22 text-md-28 text-lg-34 bold-7 lh-2 mb-5 mb-md-10">
+                Какую челюсть вы хотите восстановить?
+              </h3>
+              <div class="flex flex-column gap-3 mb-6">
+                <label class="quiz__label flex align-center relative border radius-3 pointer p-3 ease duration-3" data-waved>
+                  <input class="switch switch--radio mr-2" type="radio" value="Нижнюю челюсть" name="radio-1">
+                  <span class="color-black text-14 text-md-16 bold-5 lh-2">Нижнюю челюсть</span>
+                </label>
+                <label class="quiz__label flex align-center relative border radius-3 pointer p-3 ease duration-3" data-waved>
+                  <input class="switch switch--radio mr-2" type="radio" value="Верхнюю челюсть" name="radio-1">
+                  <span class="color-black text-14 text-md-16 bold-5 lh-2">Верхнюю челюсть</span>
+                </label>
+                <label class="quiz__label flex align-center relative border radius-3 pointer p-3 ease duration-3" data-waved>
+                  <input class="switch switch--radio mr-2" type="radio" value="Обе челюсти" name="radio-1">
+                  <span class="color-black text-14 text-md-16 bold-5 lh-2">Обе челюсти</span>
+                </label>
               </div>
             </div>
-            <div class="swiper-slide h-auto" data-quiz-slide>
-              <div class="h-100">
-                <input class="switch switch--checkbox" type="checkbox" value="checkbox-1" name="checkbox[]">
+            <div class="swiper-slide h-100" data-quiz-slide>
+              <p class="text-16 text-md-18 text-lg-20 bold-4 lh-3 mb-5 mb-md-8">
+                Ответьте на несколько простых вопросов и получите <span class="bold-6"></span>бесплатную консультацию врача!</span>
+              </p>
+              <h3 class="font-alt text-22 text-md-28 text-lg-34 bold-7 lh-2 mb-5 mb-md-10">
+                Какую ортопедическую конструкцию хотите установить на имплантаты?
+              </h3>
+              <div class="flex flex-column gap-3 mb-6">
+                <label class="quiz__label flex align-center relative border radius-3 pointer p-3 ease duration-3" data-waved>
+                  <input class="switch switch--radio mr-2" type="radio" value="Нижнюю челюсть" name="radio-2">
+                  <span class="color-black text-14 text-md-16 bold-5 lh-2">Несъемный протез с постоянной фиксацией на имплантах</span>
+                </label>
+                <label class="quiz__label flex align-center relative border radius-3 pointer p-3 ease duration-3" data-waved>
+                  <input class="switch switch--radio mr-2" type="radio" value="Верхнюю челюсть" name="radio-2">
+                  <span class="color-black text-14 text-md-16 bold-5 lh-2">Протез из циркония (12 ед.) на имплантатах</span>
+                </label>
               </div>
             </div>
-            <div class="swiper-slide h-auto" data-quiz-slide>
-              <div class="h-100">
-                <input class="switch switch--checkbox" type="checkbox" value="checkbox-1" name="checkbox[]">
+            <div class="swiper-slide h-100" data-quiz-slide>
+              <p class="text-16 text-md-18 text-lg-20 bold-4 lh-3 mb-5 mb-md-8">
+                Ответьте на несколько простых вопросов и получите <span class="bold-6"></span>бесплатную консультацию врача!</span>
+              </p>
+              <h3 class="font-alt text-22 text-md-28 text-lg-34 bold-7 lh-2 mb-5 mb-md-10">
+                Выберите систему имплантации
+              </h3>
+              <div class="flex flex-column gap-3 mb-6">
+                <label class="quiz__label flex align-center relative border radius-3 pointer p-3 ease duration-3" data-waved>
+                  <input class="switch switch--radio mr-2" type="radio" value="Эконом вариант" name="radio-3">
+                  <span class="color-black text-14 text-md-16 bold-5 lh-2">Эконом вариант</span>
+                </label>
+                <label class="quiz__label flex align-center relative border radius-3 pointer p-3 ease duration-3" data-waved>
+                  <input class="switch switch--radio mr-2" type="radio" value="Оптимальный вариант" name="radio-3">
+                  <span class="color-black text-14 text-md-16 bold-5 lh-2">Оптимальный вариант</span>
+                </label>
+                <label class="quiz__label flex align-center relative border radius-3 pointer p-3 ease duration-3" data-waved>
+                  <input class="switch switch--radio mr-2" type="radio" value="Элитный вариант" name="radio-3">
+                  <span class="color-black text-14 text-md-16 bold-5 lh-2">Элитный вариант</span>
+                </label>
+              </div>
+            </div>
+            <div class="swiper-slide h-100" data-quiz-slide>
+              <p class="text-16 text-md-18 text-lg-20 bold-4 lh-3 mb-5 mb-md-8">
+                Ответьте на несколько простых вопросов и получите <span class="bold-6"></span>бесплатную консультацию врача!</span>
+              </p>
+              <h3 class="font-alt text-22 text-md-28 text-lg-34 bold-7 lh-2 mb-5 mb-md-10">
+                Когда будет удобно прийти на консультацию?
+              </h3>
+              <label class="form-label mb-5">
+                <div class="form-wrapper">
+                  <div class="input-cover">
+                    <input class="input pl-10" data-input="calendar" type="text" placeholder="__.__.____" name="calendar">
+                  </div>
+                  <div class="form-icon form-icon--left color-second text-24">
+                    <svg class="icon mr-3">
+                      <use xlink:href="img/icons.svg#calendar">
+                    </svg>
+                  </div>
+                </div>
+              </label>
+              <p class="quiz__info text-14 text-md-16 bold-4 lh-4 radius-8 py-6 px-3 px-md-6">
+                Позже мы вам позвоним, чтобы уточнить детали, дату и время посещения нашей клиники. Длительность консультации около часа
+              </p>
+            </div>
+            <div class="swiper-slide h-100" data-quiz-slide>
+              <p class="text-16 text-md-18 text-lg-20 bold-4 lh-3 mb-5 mb-md-8">
+                Мы подготовим развернутые ответы на ваши вопросы! Точную стоимость лечения рассчитает стоматолог-хирург после первой консультации
+              </p>
+              <h3 class="font-alt text-22 text-md-28 text-lg-34 bold-7 lh-2 mb-5 mb-md-10">
+                Оставьте свои контакты, чтобы мы могли связаться с вами
+              </h3>
+              <label class="form-label mb-5" data-label="input">
+                <div class="form-wrapper">
+                  <div class="input-cover">
+                    <input class="input pl-10" data-input="name" type="text" placeholder="Введите имя" name="name">
+                  </div>
+                  <div class="form-icon form-icon--left color-second text-24">
+                    <svg class="icon mr-3">
+                      <use xlink:href="img/icons.svg#user">
+                    </svg>
+                  </div>
+                  <span class="form-error anim anim--fade" data-error>Пожалуйста, введите ваше имя!</span>
+                </div>
+              </label>
+              <label class="form-label mb-5 mb-md-8" data-label="input">
+                <div class="form-wrapper">
+                  <div class="input-cover">
+                    <input class="input pl-10" data-input="tel" type="tel" placeholder="+7 (_ _ _) _ _ _ - _ _ - _ _" name="tel">
+                  </div>
+                  <div class="form-icon form-icon--left color-second text-24">
+                    <svg class="icon mr-3">
+                      <use xlink:href="img/icons.svg#tel">
+                    </svg>
+                  </div>
+                  <span class="form-error anim anim--fade" data-error>Пожалуйста, введите ваш номер!</span>
+                </div>
+              </label>
+              <div class="flex flex-wrap align-center gap-5 gap-md-8">
+                <button class="btn btn--second btn--lg btn--fill gradient" data-waved type="submit">Отправить</button>
+                <div class="text-12 bold-4 lh-4 pointer w-100 w-md-max" data-fancybox-dialog data-type="ajax" data-src="dialogs/dialog-politics.html">
+                  <span class="fade-60">Отправляя форму, вы даете свое <br>
+                  согласие на</span> обработку персональных данных
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="quiz-slider-bottom fade-100 ease duration-2">
+        <div class="quiz-slider-bottom flex align-center gap-4 fade-100 mt-auto pb-10 ease duration-2">
+          <button class="quiz__btn swiper-button-prev default btn btn--second btn--lg btn--fill gradient w-auto mt-0" data-waved>Назад</button>
           <button class="quiz__btn swiper-button-next default btn btn--second btn--lg btn--fill gradient w-auto mt-0" data-waved>Следующий вопрос</button>
+        </div>
+      </div>
+    </div>
+    <div class="d-none d-md-block col-12 col-lg-6">
+      <div class="quiz-detail relative bg-white radius-8 h-100">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide flex flex-column h-100 py-8 px-6">
+              <div class="flex align-center justify-between gap-5">
+                <div class="flex flex-column">
+                  <span class="text-16 bold-4 fade-60 mb-1">Услугу оказывает</span>
+                  <h4 class="font-alt text-20 bold-7 lh-2">Вовк Анна Владимировна</h4>
+                </div>
+                <div class="quiz__person pack pack--box radius-max">
+                  <picture>
+                    <source srcset="img/pictures/person.webp" type="image/webp">
+                    <img class="image" src="img/pictures/person.png" alt="">
+                  </picture>
+                </div>
+              </div>
+              <div class="quiz__pack pack pack--rect w-100 mx-auto">
+                <div class="bg-block flex align-center justify-center">
+                  <div class="quiz__circle radius-max"></div>
+                </div>
+                <picture>
+                  <source srcset="img/pictures/quiz-img-1.webp" type="image/webp">
+                  <img class="image image--sd" src="img/pictures/quiz-img-1.png" alt="">
+                </picture>
+              </div>
+              <div class="flex flex-column">
+                <span class="text-16 bold-4 fade-60 mb-1">Гарантируем качество</span>
+                <h5 class="font-alt text-16 bold-6 lh-2">Импланты от лучших производителей</h5>
+              </div>
+            </div>
+            <div class="swiper-slide flex flex-column h-100 py-8 px-6">
+              <div class="flex align-center justify-between gap-5">
+                <div class="flex flex-column">
+                  <span class="text-16 bold-4 fade-60 mb-1">Услугу оказывает</span>
+                  <h4 class="font-alt text-20 bold-7 lh-2">Вовк Анна Владимировна</h4>
+                </div>
+                <div class="quiz__person pack pack--box radius-max">
+                  <picture>
+                    <source srcset="img/pictures/person.webp" type="image/webp">
+                    <img class="image" src="img/pictures/person.png" alt="">
+                  </picture>
+                </div>
+              </div>
+              <div class="quiz__pack pack pack--rect w-100 mx-auto">
+                <div class="bg-block flex align-center justify-center">
+                  <div class="quiz__circle radius-max"></div>
+                </div>
+                <picture>
+                  <source srcset="img/pictures/quiz-img-2.webp" type="image/webp">
+                  <img class="image image--sd" src="img/pictures/quiz-img-2.png" alt="">
+                </picture>
+              </div>
+              <div class="flex flex-column">
+                <span class="text-16 bold-4 fade-60 mb-1">Гарантируем качество</span>
+                <h5 class="font-alt text-16 bold-6 lh-2">Импланты от лучших производителей</h5>
+              </div>
+            </div>
+            <div class="swiper-slide flex flex-column h-100 py-8 px-6">
+              <div class="flex align-center justify-between gap-5">
+                <div class="flex flex-column">
+                  <span class="text-16 bold-4 fade-60 mb-1">Услугу оказывает</span>
+                  <h4 class="font-alt text-20 bold-7 lh-2">Вовк Анна Владимировна</h4>
+                </div>
+                <div class="quiz__person pack pack--box radius-max">
+                  <picture>
+                    <source srcset="img/pictures/person.webp" type="image/webp">
+                    <img class="image" src="img/pictures/person.png" alt="">
+                  </picture>
+                </div>
+              </div>
+              <div class="quiz__pack pack pack--rect w-100 mx-auto">
+                <div class="bg-block flex align-center justify-center">
+                  <div class="quiz__circle radius-max"></div>
+                </div>
+                <picture>
+                  <source srcset="img/pictures/quiz-img-3.webp" type="image/webp">
+                  <img class="image image--sd" src="img/pictures/quiz-img-3.png" alt="">
+                </picture>
+              </div>
+              <div class="flex flex-column">
+                <span class="text-16 bold-4 fade-60 mb-1">Гарантируем качество</span>
+                <h5 class="font-alt text-16 bold-6 lh-2">Импланты от лучших производителей</h5>
+              </div>
+            </div>
+            <div class="swiper-slide flex flex-column h-100 py-8 px-6">
+              <div class="flex align-center justify-between gap-5">
+                <div class="flex flex-column">
+                  <span class="text-16 bold-4 fade-60 mb-1">Услугу оказывает</span>
+                  <h4 class="font-alt text-20 bold-7 lh-2">Вовк Анна Владимировна</h4>
+                </div>
+                <div class="quiz__person pack pack--box radius-max">
+                  <picture>
+                    <source srcset="img/pictures/person.webp" type="image/webp">
+                    <img class="image" src="img/pictures/person.png" alt="">
+                  </picture>
+                </div>
+              </div>
+              <div class="quiz__pack pack pack--rect w-100 mx-auto">
+                <div class="bg-block flex align-center justify-center">
+                  <div class="quiz__circle radius-max"></div>
+                </div>
+                <picture>
+                  <source srcset="img/pictures/quiz-img-4.webp" type="image/webp">
+                  <img class="image image--sd" src="img/pictures/quiz-img-4.png" alt="">
+                </picture>
+              </div>
+              <div class="flex flex-column">
+                <span class="text-16 bold-4 fade-60 mb-1">Гарантируем качество</span>
+                <h5 class="font-alt text-16 bold-6 lh-2">Импланты от лучших производителей</h5>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

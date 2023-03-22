@@ -6,14 +6,13 @@ import quiz from '../ts/quiz'
 
 const init = () => {
 
-  // const quizImages = new Swiper('.quiz-images .swiper', {
+  const quizDetail = new Swiper('.quiz-detail .swiper', {
 
-  //   effect: 'cube',
-  //   slidesPerView: 1,
-  //   slidesPerGroup: 1,
-  //   allowTouchMove: false
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+    allowTouchMove: false
 
-  // })
+  })
 
   const quizSlider = new Swiper('.quiz-slider .swiper', {
 
@@ -47,7 +46,7 @@ const init = () => {
 
       slideChange: (swiper) => {
 
-        // quizImages.slideTo(swiper.activeIndex)
+        quizDetail.slideTo(swiper.activeIndex)
 
         quiz.checkQuizSlide(swiper.visibleSlides[0])
 

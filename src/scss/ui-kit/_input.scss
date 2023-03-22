@@ -16,8 +16,7 @@
   }
 
   &--textarea {
-    height       : auto;
-    border-radius: 30px !important;
+    height: auto;
   }
 
   &--error {
@@ -26,15 +25,15 @@
 
   &:first-of-type {
     border: {
-      top-left-radius   : 100px;
-      bottom-left-radius: 100px;
+      top-left-radius   : 12px;
+      bottom-left-radius: 12px;
     }
   }
 
   &:last-of-type {
     border: {
-      top-right-radius   : 100px;
-      bottom-right-radius: 100px;
+      top-right-radius   : 12px;
+      bottom-right-radius: 12px;
     }
   }
 

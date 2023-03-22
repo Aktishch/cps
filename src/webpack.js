@@ -1,4 +1,5 @@
 // Libraries
+import airDatepicker from './lib/air-datepicker'
 import yandexMap from './lib/yandex-map'
 import fancybox from './lib/fancybox'
 import sliderSwiper from './lib/slider-swiper'
@@ -23,6 +24,7 @@ import './scss/index.scss'
 // Connection
 window.addEventListener('DOMContentLoaded', () => {
 
+  airDatepicker.init()
   yandexMap.init()
   fancybox.init()
   sliderSwiper.init()

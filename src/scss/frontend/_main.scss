@@ -14,6 +14,22 @@
     max-width: 600px;
   }
 
+  &__input {
+    &:first-of-type {
+      border: {
+        top-left-radius   : 100px;
+        bottom-left-radius: 100px;
+      }
+    }
+
+    &:last-of-type {
+      border: {
+        top-right-radius   : 100px;
+        bottom-right-radius: 100px;
+      }
+    }
+  }
+
   &__pack {
     &--1 {
       max-width: 270px;
@@ -164,6 +180,9 @@
   }
 
   &-slider {
+    background-image: radial-gradient(98.48% 326.98% at 0% 3.35%, var(--color-white-10) 0%, var(--color-white-10) 100%);
+    border          : 2px solid var(--color-white-20);
+
     &[data-quiz="stop"] .swiper-button-next {
       pointer-events: none;
       opacity       : 0.5;
@@ -173,10 +192,55 @@
       visibility: hidden;
       opacity   : 0;
     }
+  }
 
-    &__btn {
-      left : 0;
-      right: 0;
+  &__label {
+    background-color: var(--color-white-80);
+  }
+
+  &__btn {
+    left : 0;
+    right: 0;
+  }
+
+  &__person {
+    width           : 70px;
+    background-color: #EFDCCF;
+  }
+
+  &__circle {
+    width     : 360px;
+    height    : 360px;
+    background: linear-gradient(253.69deg, var(--color-white-20) 0%, var(--color-none) 61.32%), rgba(254, 202, 204, 0.6);
+  }
+
+  &__info {
+    background: radial-gradient(98.48% 326.98% at 0% 3.35%, var(--color-white-10) 0%, var(--color-white-10) 100%);
+    border    : 2px solid var(--color-white-20);
+  }
+
+  @media(hover) {
+    &__label:hover {
+      background-color: var(--color-white);
+    }
+  }
+
+  @media(max-width: $xl) {
+    &__circle {
+      width : 300px;
+      height: 300px;
+    }
+  }
+
+  @media(max-width: $lg) {
+    &__bg {
+      border-radius: 0;
+    }
+
+    &__pack {
+      &::before {
+        padding-top: 50%;
+      }
     }
   }
 }
@@ -346,7 +410,7 @@
 
   @media(max-width: $md) {
     &__block {
-      height: 480px;
+      height: 460px;
     }
   }
 }
