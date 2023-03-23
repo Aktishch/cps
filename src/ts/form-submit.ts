@@ -14,10 +14,10 @@ const formSubmit = (event: Event): void => {
 
   let requestUrl: string = ''
 
-  requestUrl = '/ajax/submit-handler.php'
+  requestUrl = '/all-on-4/ajax/submit-handler.php'
   submitBtn.setAttribute('disabled', 'disabled')
 
-  dialog.open('fancybox-loading', '/dialogs/loading.php')
+  dialog.open('fancybox-loading', '/all-on-4/dialogs/loading.php')
 
   fetch(requestUrl, {
 
@@ -34,7 +34,7 @@ const formSubmit = (event: Event): void => {
 
     if (form.dataset.form == 'submit') {
 
-      dialog.open('fancybox-dialog', '/dialogs/dialog-submit.php')
+      dialog.open('fancybox-dialog', '/all-on-4/dialogs/dialog-submit.php')
 
       form.reset()
 
