@@ -1,6 +1,16 @@
 import formValidate from './functions/form-validate'
 import dialog from './functions/dialog'
 
+declare global {
+
+  interface Window {
+
+    ym: any
+
+  }
+
+}
+
 const formSubmit = (event: Event): void => {
 
   event.preventDefault()
@@ -31,6 +41,8 @@ const formSubmit = (event: Event): void => {
   }).then((): void => {
 
     dialog.close()
+
+    window.ym(93218031,'reachGoal','zayavka')
 
     if (form.dataset.form == 'submit') {
 
