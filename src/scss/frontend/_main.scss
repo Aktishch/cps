@@ -17,60 +17,86 @@
   &__input {
     &:first-of-type {
       border: {
-        top-left-radius   : 100px;
+        top-left-radius: 100px;
         bottom-left-radius: 100px;
       }
     }
 
     &:last-of-type {
       border: {
-        top-right-radius   : 100px;
+        top-right-radius: 100px;
         bottom-right-radius: 100px;
       }
     }
   }
 
+  &__info {
+    max-width: 410px;
+    background-color: #FFEBCE;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 50px;
+      height: 100%;
+      background-color: #FFAE68;
+      filter: blur(41px);
+      transform: rotate(-45deg);
+    }
+  }
+
+  &__coins {
+    max-width: 54px;
+  }
+
+  &__free {
+    color: #b56833;
+  }
+
   &__pack {
     &--1 {
       max-width: 270px;
-      top      : 200px;
-      left     : 30px;
+      top: 200px;
+      left: 30px;
     }
 
     &--2 {
       max-width: 260px;
-      top      : 110px;
-      right    : -25px;
+      top: 110px;
+      right: -25px;
     }
   }
 
   &__item {
-    max-width    : 320px;
-    height       : 140px;
+    max-width: 320px;
+    height: 140px;
     border-radius: 100px;
 
     &--1 {
       bottom: 44px;
-      left  : -66px;
+      left: -66px;
     }
 
     &--2 {
-      border         : 2px solid var(--color-white-40);
+      border: 2px solid var(--color-white-40);
       backdrop-filter: blur(15px);
-      bottom         : 157px;
-      right          : -30px;
+      bottom: 157px;
+      right: -30px;
     }
   }
 
   &__circle {
     &--1 {
       min-width: 125px;
-      width    : 125px;
+      width: 125px;
     }
 
     &--2 {
       min-width: 185px;
-      width    : 185px;
+      width: 185px;
     }
   }
 
@@ -108,22 +134,22 @@
 
     &__block {
       &::after {
-        content   : "";
-        position  : absolute;
-        bottom    : -50px;
-        left      : 0;
-        right     : 0;
-        width     : 100%;
-        height    : 130px;
+        content: "";
+        position: absolute;
+        bottom: -50px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 130px;
         background: linear-gradient(0deg, var(--color-grey) 40%, var(--color-none) 100%);
       }
     }
 
     &__item {
       &--2 {
-        border          : none;
-        backdrop-filter : blur(0);
-        color           : var(--color-black);
+        border: none;
+        backdrop-filter: blur(0);
+        color: var(--color-black);
         background-color: var(--color-white);
       }
     }
@@ -139,11 +165,11 @@
     }
 
     &__item {
-      border-radius   : 50%;
-      max-width       : 110px;
-      height          : 110px;
-      justify-content : center;
-      color           : var(--color-white);
+      border-radius: 50%;
+      max-width: 110px;
+      height: 110px;
+      justify-content: center;
+      color: var(--color-white);
       background-color: var(--color-second);
 
       &--1 {
@@ -181,11 +207,11 @@
 
   &-slider {
     background-image: radial-gradient(98.48% 326.98% at 0% 3.35%, var(--color-white-10) 0%, var(--color-white-10) 100%);
-    border          : 2px solid var(--color-white-20);
+    border: 2px solid var(--color-white-20);
 
     &[data-quiz="stop"] .swiper-button-next {
       pointer-events: none;
-      opacity       : 0.5;
+      opacity: 0.5;
     }
 
     &[data-quiz-end] &-btns {
@@ -202,34 +228,34 @@
   }
 
   &__btn {
-    left : 0;
+    left: 0;
     right: 0;
   }
 
   &__person {
-    width           : 70px;
+    width: 70px;
     background-color: #EFDCCF;
   }
 
   &__circle {
-    width     : 360px;
-    height    : 360px;
+    width: 360px;
+    height: 360px;
     background: linear-gradient(253.69deg, var(--color-white-20) 0%, var(--color-none) 61.32%), rgba(254, 202, 204, 0.6);
   }
 
   &__info {
     background: radial-gradient(98.48% 326.98% at 0% 3.35%, var(--color-white-10) 0%, var(--color-white-10) 100%);
-    border    : 2px solid var(--color-white-20);
+    border: 2px solid var(--color-white-20);
   }
 
   &__image {
-    max-width       : 325px;
+    max-width: 325px;
     background-image: linear-gradient(180deg, var(--color-black-10) 0%, var(--color-none) 100%);
   }
 
   &__result {
     background: radial-gradient(98.48% 326.98% at 0% 3.35%, var(--color-white-10) 0%, var(--color-white-10) 100%);
-    border    : 2px solid var(--color-white-20);
+    border: 2px solid var(--color-white-20);
     min-height: 580px;
   }
 
@@ -251,7 +277,7 @@
 
   @media(max-width: $xl) {
     &__circle {
-      width : 300px;
+      width: 300px;
       height: 300px;
     }
   }
@@ -290,9 +316,9 @@
   }
 
   &__circle {
-    width : 100px;
+    width: 100px;
     height: 100px;
-    left  : 16px;
+    left: 16px;
     bottom: 16px;
   }
 
@@ -302,9 +328,9 @@
     }
 
     &__circle {
-      width : 70px;
+      width: 70px;
       height: 70px;
-      left  : 8px;
+      left: 8px;
       bottom: 8px;
     }
   }
@@ -323,17 +349,17 @@
   }
 
   &__content {
-    max-width       : 275px;
-    border          : 1px solid var(--color-white-60);
+    max-width: 275px;
+    border: 1px solid var(--color-white-60);
     background-color: var(--color-white-40);
-    box-shadow      : 0px 5px 80px var(--color-black-10);
+    box-shadow: 0px 5px 80px var(--color-black-10);
   }
 
   &__circle {
-    width : 130px;
+    width: 130px;
     height: 130px;
-    top   : -50px;
-    left  : -42px;
+    top: -50px;
+    left: -42px;
   }
 
   &__number {
@@ -350,8 +376,8 @@
 
   &__year {
     min-width: 130px;
-    width    : 130px;
-    height   : 90px;
+    width: 130px;
+    height: 90px;
   }
 
   @media(min-width: $md) {
@@ -381,8 +407,8 @@
 
     &__year {
       min-width: 90px;
-      width    : 90px;
-      height   : 70px;
+      width: 90px;
+      height: 70px;
     }
   }
 }
@@ -395,7 +421,7 @@
 
   &__block {
     max-width: 620px;
-    height   : 560px;
+    height: 560px;
   }
 
   &__pack {
@@ -415,7 +441,7 @@
   @media(max-width: $xl) {
     & {
       flex-direction: column;
-      align-items   : center;
+      align-items: center;
     }
 
     &__content,
@@ -468,9 +494,9 @@
 
     &::before,
     &::after {
-      content : "";
+      content: "";
       position: absolute;
-      inset   : 0;
+      inset: 0;
     }
 
     &::before {
@@ -494,7 +520,7 @@
 
   &__content {
     background-image: linear-gradient(136.65deg, var(--color-white-40) 38.83%, var(--color-none) 81.79%);
-    backdrop-filter : blur(15px);
+    backdrop-filter: blur(15px);
   }
 
   &__info {
@@ -524,7 +550,7 @@
 
     &__content {
       flex-direction: column;
-      align-items   : flex-start;
+      align-items: flex-start;
     }
 
     &__info {
@@ -544,7 +570,7 @@
     }
 
     &__image {
-      max-width    : 100%;
+      max-width: 100%;
       border-radius: 12px;
     }
   }
@@ -566,22 +592,22 @@
 .reviews {
   &__card {
     &::after {
-      content         : "";
-      position        : absolute;
-      inset           : 0;
+      content: "";
+      position: absolute;
+      inset: 0;
       background-image: linear-gradient(180deg, var(--color-none) 77.56%, var(--color-white) 96.65%);
-      pointer-events  : none;
+      pointer-events: none;
     }
   }
 
   &__circle {
-    width : 125px;
+    width: 125px;
     height: 125px;
     border: 2px solid var(--color-second);
   }
 
   &__items {
-    height         : 300px;
+    height: 300px;
     scrollbar-width: none;
 
     &::-webkit-scrollbar {
@@ -610,13 +636,13 @@
 .personal {
   &__pack {
     background-image: linear-gradient(180deg, var(--color-black-10) 0%, var(--color-none) 100%);
-    max-width       : 300px;
+    max-width: 300px;
   }
 
   @media(min-width: $md) and (hover) {
     &__text {
       visibility: hidden;
-      opacity   : 0;
+      opacity: 0;
     }
   }
 
@@ -627,7 +653,7 @@
 
     &-slide:hover &__text {
       visibility: visible;
-      opacity   : 1;
+      opacity: 1;
     }
   }
 

@@ -27,7 +27,7 @@
         Нужны наши услуги? <br class="d-none d-md-block">Оставьте заявку!
       </h3>
     </div>
-    <form class="main__form form flex-wrap flex-row align-center gap-5 gap-md-2 ease-out duration-4 delay-6 anim anim--up" data-form="submit" data-anim="hidden">
+    <form class="main__form form flex-wrap flex-row align-center gap-5 gap-md-2 mb-5 mb-md-9 ease-out duration-4 delay-md-6 anim anim--up" data-form="submit" data-anim="hidden">
       <input type="hidden" value="Главный экран" name="theme">
       <label class="form-label w-100 w-md-auto" data-label="input">
         <div class="form-wrapper">
@@ -39,6 +39,17 @@
       </label>
       <button class="btn btn--second btn--lg btn--fill gradient" data-waved type="submit">Отправить</button>
     </form>
+    <div class="main__info flex align-center relative radius-5 overflow-hidden w-100 py-2 px-4 ease-out duration-4 delay-md-7 anim anim--up" data-anim="hidden">
+      <div class="main__coins pack pack--photo w-100 mr-3">
+        <picture>
+          <source srcset="img/pictures/coins.webp" type="image/webp">
+          <img class="image image--sd" src="img/pictures/coins.png" alt="">
+        </picture>
+      </div>
+      <p class="text-16 text-md-18 bold-5 lh-2">
+        При оформлении <b>заявки с сайта</b> консультация <b class="main__free">бесплатно</b>
+      </p>
+    </div>
   </div>
   <div class="main__block order-1 order-lg-2 relative pointer-none w-100 h-100 mb-10 mb-lg-0">
     <div class="main__pack main__pack--1 pack pack--rect absolute w-100 linear duration-3" data-parallax="scroll" data-parallax-depth="2" data-reverse>
@@ -835,6 +846,10 @@
           <span class="d-none d-md-inline">Записаться на бесплатную консультацию</span>
           <span class="d-inline d-md-none">Бесплатная консультация</span>
         </button>
+        <div class="flex align-center mt-5">
+          <img class="icon text-20 mr-3" src="img/pictures/i.svg" alt="">
+          <p class="text-14 text-md-16 bold-6 lh-2 fade-60">При оформлении заявки с сайта консультация бесплатно</p>
+        </div>
       </div>
     </div>
   </div>
