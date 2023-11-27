@@ -70,6 +70,13 @@
     }
   }
 
+  &__tree {
+    max-width: none;
+    width: 850px;
+    bottom: 0;
+    left: 80px;
+  }
+
   &__item {
     max-width: 320px;
     height: 140px;

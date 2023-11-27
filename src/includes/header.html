@@ -16,18 +16,28 @@
 </head>
 <body>
 
+  <!-- Прелоадер -->
+
+  <div class="preloader flex align-center justify-center fixed zi-9 bg-white w-100 h-100 duration-3" data-preloader>
+    <div class="loading">
+      <div class="loading-circle"></div>
+    </div>
+  </div>
+
   <!-- Шапка документа -->
 
-  <header class="header container flex align-center justify-between gap-3 gap-md-5 zi-3 bg-white border-bottom py-2 py-md-3 py-lg-6 linear duration-3" data-header>
+  <header class="header container flex align-center justify-between gap-3 gap-md-5 relative zi-4 bg-white border-bottom py-2 py-md-3 py-lg-6 linear duration-3" data-header>
     <button class="btn btn--primary d-lg-none text-44 radius-1" data-burger data-waved>
       <svg class="icon">
         <use xlink:href="img/icons.svg#burger">
       </svg>
     </button>
     <a class="btn btn--second color-primary text-24 text-md-30 radius-1" data-waved href="/">
-      <svg class="icon zoom-2 mr-md-3">
-        <use xlink:href="img/icons.svg#logo">
-      </svg>
+      <span class="header__logo flex align-center justify-center relative mr-md-3">
+        <svg class="header__icon icon relative zi-1 zoom-2">
+          <use xlink:href="img/icons.svg#logo">
+        </svg>
+      </span>
       <span class="d-none d-md-inline text text--uppercase text--left text-12 bold-6 lh-4">
         ЦЕНТР <br>
         Профессиональной<br>
@@ -35,8 +45,9 @@
       </span>
     </a>
     <div class="d-none d-lg-flex align-center">
-      <div class="flex align-center justify-center icon bg-second gradient color-white text-32 radius-max mr-3">
-        <svg class="icon text-20">
+      <div class="header__circle flex align-center justify-center relative icon bg-second gradient color-white text-32 radius-max mr-3">
+        <span class="header__shadow d-none icon absolute bg-white text-32 fade-20 radius-max"></span>
+        <svg class="icon relative text-20">
           <use xlink:href="img/icons.svg#geo">
         </svg>
       </div>
@@ -46,8 +57,9 @@
       </div>
     </div>
     <div class="d-none d-lg-flex align-center">
-      <div class="flex align-center justify-center icon bg-second gradient color-white text-32 radius-max mr-3">
-        <svg class="icon text-20">
+      <div class="header__circle flex align-center justify-center relative icon bg-second gradient color-white text-32 radius-max mr-3">
+        <span class="header__shadow d-none icon absolute bg-white text-32 fade-20 radius-max"></span>
+        <svg class="icon relative text-20">
           <use xlink:href="img/icons.svg#clock">
         </svg>
       </div>
@@ -57,8 +69,9 @@
       </div>
     </div>
     <a class="d-none d-lg-flex align-center link-wrapper" href="tel: +7(928)210-90-60">
-      <div class="flex align-center justify-center icon bg-second gradient color-white text-32 radius-max mr-3">
-        <svg class="icon text-20">
+      <div class="header__circle flex align-center justify-center relative icon bg-second gradient color-white text-32 radius-max mr-3">
+        <span class="header__shadow d-none icon absolute bg-white text-32 fade-20 radius-max"></span>
+        <svg class="icon relative text-20">
           <use xlink:href="img/icons.svg#tel">
         </svg>
       </div>
